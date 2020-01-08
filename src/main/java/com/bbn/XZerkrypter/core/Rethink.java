@@ -72,7 +72,7 @@ public class Rethink {
     }
 
     public void setBotPremium(String id) {
-        r.table("BotPlus").insert(r.hashMap("id", id)).run(conn);
+        this.insert("BotPlus",r.hashMap("id", id));
     }
 
     public boolean isBotPremium(String id) {

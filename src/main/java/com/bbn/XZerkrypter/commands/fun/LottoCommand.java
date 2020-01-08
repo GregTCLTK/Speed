@@ -6,7 +6,6 @@ package com.bbn.XZerkrypter.commands.fun;
 
 import com.bbn.XZerkrypter.XZerkrypter;
 import com.bbn.XZerkrypter.commands.Command;
-import com.bbn.XZerkrypter.core.Rethink;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;

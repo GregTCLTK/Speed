@@ -9,7 +9,6 @@ import com.rethinkdb.net.Connection;
 import org.json.JSONArray;
 
 import java.util.NoSuchElementException;
-import java.util.Objects;
 
 public class Rethink {
     private RethinkDB r = RethinkDB.r;
@@ -24,6 +23,7 @@ public class Rethink {
                     .user(SECRETS.username, SECRETS.password)
                     .connect();
             System.out.println("DB CONNECTED");
+            System.out.println(this.get("user", "id", "477141528981012511", "bot_premium"));
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("DB CONNECTION FAILED");
@@ -72,10 +72,15 @@ public class Rethink {
     }
 
     public void setBotPremium(String id) {
-        this.insert("BotPlus",r.hashMap("id", id));
+        r.table("user").get(id).update(r.hashMap("bot_premium", true)).run(conn);
     }
 
     public boolean isBotPremium(String id) {
-        return Objects.requireNonNull(this.getAsArray("BotPlus", "id", id)).toString().contains(id);
+        return (Boolean) this.get("user", "id", id, "bot_premium");
+    }
+
+    public void insertUser(String id) {
+        this.insert("user", r.hashMap("id", id)
+                .with("bot_premium", false));
     }
 }

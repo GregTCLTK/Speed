@@ -35,6 +35,7 @@ public class XZerkrypter {
         CommandHandler.commands.put("lotto", new LottoCommand());
         CommandHandler.commands.put("help", new HelpCommand());
         CommandHandler.commands.put("selbstzerstörung", new SelbstzerstoerungCommand());
+
         try {
             builder.build();
         } catch (LoginException e) {

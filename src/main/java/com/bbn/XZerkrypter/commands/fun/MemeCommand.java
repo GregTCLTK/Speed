@@ -22,7 +22,7 @@ public class MemeCommand implements Command {
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
 
-        if (XZerkrypter.BotPlus.contains(event.getAuthor().getId())) {
+        if (XZerkrypter.rethink.isBotPremium(event.getAuthor().getId())) {
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder().url("https://some-random-api.ml/meme").build();
 

@@ -18,7 +18,7 @@ public class SelbstzerstoerungCommand implements Command {
 
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
-        if (XZerkrypter.BotPlus.contains(event.getAuthor().getId())) {
+        if (XZerkrypter.rethink.isBotPremium(event.getAuthor().getId())) {
             boolean random = Math.random() < 0.50;
             Message msg = event.getTextChannel().sendMessage("Leite Selbstzerstörung ein in 5... :bomb:").complete();
             if (random) {

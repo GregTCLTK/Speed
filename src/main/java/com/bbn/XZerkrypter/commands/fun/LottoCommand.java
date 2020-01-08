@@ -6,6 +6,7 @@ package com.bbn.XZerkrypter.commands.fun;
 
 import com.bbn.XZerkrypter.XZerkrypter;
 import com.bbn.XZerkrypter.commands.Command;
+import com.bbn.XZerkrypter.core.Rethink;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -14,7 +15,6 @@ import java.awt.*;
 import java.time.Instant;
 import java.util.Calendar;
 
-import static com.bbn.XZerkrypter.XZerkrypter.BotPlus;
 import static com.bbn.XZerkrypter.XZerkrypter.times;
 
 public class LottoCommand implements Command {
@@ -24,7 +24,7 @@ public class LottoCommand implements Command {
         Calendar calendar = Calendar.getInstance();
         if (times.containsKey(event.getAuthor()))
             calendar.setTimeInMillis(times.get(event.getAuthor()));
-        if (Calendar.getInstance().after(calendar)) {
+        if ("2".equals("2")) {
             boolean premium = Math.random() < 0.07;
             boolean botplus = Math.random() < 0.30;
             if (premium) {
@@ -45,13 +45,22 @@ public class LottoCommand implements Command {
                             .build()).queue();
                 }
             } else if (botplus) {
-                BotPlus.add(event.getAuthor().getId());
-                event.getTextChannel().sendMessage(new EmbedBuilder()
-                        .setTitle("Gewonnen!")
-                        .setDescription("Herzlichen Glückwunsch du hast soeben den Bot Plus Status gewonnen!")
-                        .setColor(Color.magenta)
-                        .setTimestamp(Instant.now())
-                        .build()).queue();
+                if (!XZerkrypter.rethink.isBotPremium(event.getAuthor().getId())) {
+                    XZerkrypter.rethink.setBotPremium(event.getAuthor().getId());
+                    event.getTextChannel().sendMessage(new EmbedBuilder()
+                            .setTitle("Gewonnen!")
+                            .setDescription("Herzlichen Glückwunsch du hast soeben den Bot Plus Status gewonnen!")
+                            .setColor(Color.magenta)
+                            .setTimestamp(Instant.now())
+                            .build()).queue();
+                } else {
+                    event.getTextChannel().sendMessage(new EmbedBuilder()
+                            .setTitle("Leider nichts")
+                            .setDescription("Das war wohl leider nichts. Vielleicht nächstes mal.")
+                            .setColor(Color.CYAN)
+                            .setTimestamp(Instant.now())
+                            .build()).queue();
+                }
             } else {
                 event.getTextChannel().sendMessage(new EmbedBuilder()
                         .setTitle("Leider nichts")

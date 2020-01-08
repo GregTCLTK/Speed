@@ -29,7 +29,7 @@ public class LottoCommand implements Command {
             boolean botplus = Math.random() < 0.30;
             if (premium) {
                 if (event.getGuild().getSelfMember().hasPermission(Permission.MANAGE_ROLES)) {
-                    event.getGuild().addRoleToMember(event.getMember(), event.getGuild().getRoleById("648424818441715723")).reason("Im Lotto gewonnen").queue();
+                    event.getGuild().addRoleToMember(event.getMember(), event.getJDA().getGuildById("662472489317695490").getRoleById("664367891839189015")).reason("Im Lotto gewonnen").queue();
                     event.getTextChannel().sendMessage(new EmbedBuilder()
                             .setTitle("Gewonnen!")
                             .setDescription("Herzlichen Glückwunsch du hast soeben die Premium Rolle gewonnen!")

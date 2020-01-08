@@ -16,7 +16,10 @@ public class XZerkrypter {
 
     public static ArrayList BotPlus = new ArrayList();
     public static HashMap<User, Long> times = new HashMap<>();
+    
     public static void main(String[] Args) {
+
+        new Rethink().connect();
 
         DefaultShardManagerBuilder builder = new DefaultShardManagerBuilder();
         builder.setToken(SECRETS.Token);

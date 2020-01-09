@@ -33,6 +33,7 @@ public class XZerkrypter {
         CommandHandler.commands.put("help", new HelpCommand());
         CommandHandler.commands.put("selbstzerstörung", new SelbstzerstoerungCommand());
         CommandHandler.commands.put("stats", new StatsCommand());
+        CommandHandler.commands.put("add", new AddCommand());
 
         try {
             builder.build();

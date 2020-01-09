@@ -91,9 +91,19 @@ public class Rethink {
         }
     }
 
+    public void setMoney(String id, int amount) {
+
+    }
+
+    public int getMoney(String id) {
+
+        return 0;
+    }
+
     public void insertUser(String id) {
         this.insert("user", r.hashMap("id", id)
                 .with("bot_premium", false)
-                .with("last_lotto", null));
+                .with("last_lotto", null)
+                .with("money", 0));
     }
 }

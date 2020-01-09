@@ -5,11 +5,9 @@ import com.bbn.XZerkrypter.commands.misc.*;
 import com.bbn.XZerkrypter.commands.moderation.*;
 import com.bbn.XZerkrypter.core.*;
 import com.bbn.XZerkrypter.listener.*;
-import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder;
 
 import javax.security.auth.login.LoginException;
-import java.util.HashMap;
 
 public class XZerkrypter {
 
@@ -34,6 +32,7 @@ public class XZerkrypter {
         CommandHandler.commands.put("lotto", new LottoCommand());
         CommandHandler.commands.put("help", new HelpCommand());
         CommandHandler.commands.put("selbstzerstörung", new SelbstzerstoerungCommand());
+        CommandHandler.commands.put("stats", new StatsCommand());
 
         try {
             builder.build();

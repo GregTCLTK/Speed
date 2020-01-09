@@ -13,7 +13,6 @@ import java.util.HashMap;
 
 public class XZerkrypter {
 
-    public static HashMap<User, Long> times = new HashMap<>();
     public static Rethink rethink = new Rethink();
 
     public static void main(String[] Args) {

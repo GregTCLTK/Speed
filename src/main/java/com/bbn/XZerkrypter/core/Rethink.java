@@ -8,6 +8,7 @@ import com.rethinkdb.RethinkDB;
 import com.rethinkdb.net.Connection;
 import org.json.JSONArray;
 
+import java.time.Instant;
 import java.util.NoSuchElementException;
 
 public class Rethink {
@@ -23,7 +24,6 @@ public class Rethink {
                     .user(SECRETS.username, SECRETS.password)
                     .connect();
             System.out.println("DB CONNECTED");
-            System.out.println(this.get("user", "id", "477141528981012511", "bot_premium"));
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("DB CONNECTION FAILED");
@@ -79,8 +79,21 @@ public class Rethink {
         return (Boolean) this.get("user", "id", id, "bot_premium");
     }
 
+    public void setLottoTime(Instant time, String id) {
+        this.update("user", id, "last_lotto", time.toString());
+    }
+
+    public Instant getLottoTime(String id) {
+        try {
+            return Instant.parse((CharSequence) this.get("user", "id", id, "last_lotto"));
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
     public void insertUser(String id) {
         this.insert("user", r.hashMap("id", id)
-                .with("bot_premium", false));
+                .with("bot_premium", false)
+                .with("last_lotto", null));
     }
 }

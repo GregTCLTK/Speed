@@ -92,12 +92,11 @@ public class Rethink {
     }
 
     public void setMoney(String id, int amount) {
-
+        r.table("user").get(id).update(r.hashMap("money", amount)).run(conn);
     }
 
     public int getMoney(String id) {
-
-        return 0;
+        return (int) this.get("user", "id", id, "money");
     }
 
     public void insertUser(String id) {

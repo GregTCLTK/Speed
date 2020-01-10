@@ -99,10 +99,29 @@ public class Rethink {
         return (int) this.get("user", "id", id, "money");
     }
 
+    public void setGlobal(String guild_id, String channel_id) {
+        this.update("guilds", guild_id, "channel", channel_id);
+    }
+
+    public boolean hasGlobal(String guild_id) {
+        return this.get("guilds", "id", guild_id, "channel") != null;
+    }
+
+    public String getGlobal(String guild_id) {
+        return (String) this.get("guilds", "id", guild_id, "channel");
+    }
+
     public void insertUser(String id) {
         this.insert("user", r.hashMap("id", id)
                 .with("bot_premium", false)
                 .with("last_lotto", null)
                 .with("money", 0));
+    }
+
+    public void insertGuild(String id) {
+        this.insert("guilds", r
+                .hashMap("id", id)
+                .with("channel", null)
+        );
     }
 }

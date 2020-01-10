@@ -30,6 +30,8 @@ public class HelpCommand implements Command {
                 .addField("?add", "Gibt einem Benutzer Bäume (Nur für Klötchengrafik)", true)
                 .addField("?remove", "Entfernt einem Benutzer Bäume (Nur für Klötchengrafik)", true)
                 .addField("?give", "Gibt einem anderem Benutzer eine bestimmte Anzahl von Bäumen", true)
+                .addField("?setglobal", "Legt den Channel für den globalen Chat fest", true)
+                .addField("?removeglobal", "Entfernt den Channel für den globalen Chat", true)
                 .setColor(Color.GREEN)
                 .setTimestamp(Instant.now())
                 .build()).queue();

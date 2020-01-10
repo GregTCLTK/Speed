@@ -28,6 +28,7 @@ public class HelpCommand implements Command {
                 .addField("?lotto", "Gibt die die Chance Premium oder Bot Plus zu gewinnen", true)
                 .addField("?stats", "Zeigt deine Stats an", true)
                 .addField("?add", "Gibt einem Benutzer Bäume (Nur für Klötchengrafik)", true)
+                .addField("?remove", "Entfernt einem Benutzer Bäume (Nur für Klötchengrafik)", true)
                 .addField("?give", "Gibt einem anderem Benutzer eine bestimmte Anzahl von Bäumen", true)
                 .setColor(Color.GREEN)
                 .setTimestamp(Instant.now())

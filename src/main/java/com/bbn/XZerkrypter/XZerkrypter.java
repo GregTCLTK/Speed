@@ -5,6 +5,7 @@ import com.bbn.XZerkrypter.commands.misc.*;
 import com.bbn.XZerkrypter.commands.moderation.*;
 import com.bbn.XZerkrypter.commands.money.AddCommand;
 import com.bbn.XZerkrypter.commands.money.GiveCommand;
+import com.bbn.XZerkrypter.commands.money.RemoveCommand;
 import com.bbn.XZerkrypter.core.*;
 import com.bbn.XZerkrypter.listener.*;
 import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder;
@@ -37,6 +38,7 @@ public class XZerkrypter {
         CommandHandler.commands.put("stats", new StatsCommand());
         CommandHandler.commands.put("add", new AddCommand());
         CommandHandler.commands.put("give", new GiveCommand());
+        CommandHandler.commands.put("remove", new RemoveCommand());
 
         try {
             builder.build();

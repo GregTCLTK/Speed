@@ -25,7 +25,7 @@ public class AddCommand implements Command {
                 if (event.getMessage().getMentionedUsers().size() == 1) {
                     try {
                         int amount = Integer.parseInt(args[1]);
-                        XZerkrypter.rethink.setMoney(event.getMessage().getMentionedUsers().get(0).getId(), amount);
+                        XZerkrypter.rethink.setMoney(event.getMessage().getMentionedUsers().get(0).getId(), XZerkrypter.rethink.getMoney(event.getMessage().getMentionedUsers().get(0).getId()) + amount);
                         event.getTextChannel().sendMessage(new EmbedBuilder()
                                 .setTitle("Erfolgreich hinzugefügt")
                                 .setDescription(event.getMessage().getMentionedUsers().get(0).getName() + " hat erfolgreich " + amount + " Bäume erhalten.")

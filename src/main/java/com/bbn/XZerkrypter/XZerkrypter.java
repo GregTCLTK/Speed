@@ -3,6 +3,8 @@ package com.bbn.XZerkrypter;
 import com.bbn.XZerkrypter.commands.fun.*;
 import com.bbn.XZerkrypter.commands.misc.*;
 import com.bbn.XZerkrypter.commands.moderation.*;
+import com.bbn.XZerkrypter.commands.money.AddCommand;
+import com.bbn.XZerkrypter.commands.money.GiveCommand;
 import com.bbn.XZerkrypter.core.*;
 import com.bbn.XZerkrypter.listener.*;
 import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder;

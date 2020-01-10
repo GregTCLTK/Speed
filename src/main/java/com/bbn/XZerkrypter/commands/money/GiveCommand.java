@@ -1,4 +1,4 @@
-package com.bbn.XZerkrypter.commands.fun;
+package com.bbn.XZerkrypter.commands.money;
 
 /*
  * @Author Skidder / GregTCLTK
@@ -11,6 +11,10 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 import java.awt.*;
 import java.time.Instant;
+
+/*
+ * @Author Skidder / GregTCLTK
+ */
 
 public class GiveCommand implements Command {
 

@@ -1,6 +1,7 @@
 package com.bbn.XZerkrypter;
 
 import com.bbn.XZerkrypter.commands.fun.*;
+import com.bbn.XZerkrypter.commands.global.RemoveGlobalCommand;
 import com.bbn.XZerkrypter.commands.global.SetGlobalCommand;
 import com.bbn.XZerkrypter.commands.misc.*;
 import com.bbn.XZerkrypter.commands.moderation.*;
@@ -41,6 +42,7 @@ public class XZerkrypter {
         CommandHandler.commands.put("give", new GiveCommand());
         CommandHandler.commands.put("remove", new RemoveCommand());
         CommandHandler.commands.put("setglobal", new SetGlobalCommand());
+        CommandHandler.commands.put("removeglobal", new RemoveGlobalCommand());
 
         try {
             builder.build();

@@ -1,5 +1,6 @@
 package com.bbn.XZerkrypter;
 
+import com.bbn.XZerkrypter.commands.Command;
 import com.bbn.XZerkrypter.commands.fun.*;
 import com.bbn.XZerkrypter.commands.global.*;
 import com.bbn.XZerkrypter.commands.misc.*;
@@ -46,7 +47,8 @@ public class XZerkrypter {
         CommandHandler.commands.put("setglobal", new SetGlobalCommand());
         CommandHandler.commands.put("removeglobal", new RemoveGlobalCommand());
         CommandHandler.commands.put("globalmute", new GlobalMuteCommand());
-        CommandHandler.commands.put("setteam", new SetTeamCommand());
+        CommandHandler.commands.put("addteam", new AddTeamCommand());
+        CommandHandler.commands.put("removeteam", new RemoveTeamCommand());
 
         try {
             builder.build();

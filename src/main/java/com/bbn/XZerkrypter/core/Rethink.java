@@ -129,4 +129,8 @@ public class Rethink {
                 .with("channel", null)
         );
     }
+
+    public void removeGuild(String id) {
+        this.remove("guilds", "id", id);
+    }
 }

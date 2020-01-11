@@ -128,12 +128,21 @@ public class Rethink {
         return (Boolean) this.get("user", "id", id, "team");
     }
 
+    public void setMuted(String id, boolean b) {
+        r.table("user").get(id).update(r.hashMap("muted", b)).run(conn);
+    }
+
+    public boolean isMuted(String id) {
+        return (Boolean) this.get("user", "id", id, "muted");
+    }
+
     public void insertUser(String id) {
         this.insert("user", r.hashMap("id", id)
                 .with("bot_premium", false)
                 .with("last_lotto", null)
                 .with("money", 0)
-                .with("team", false));
+                .with("team", false)
+                .with("muted", false));
     }
 
     public void insertGuild(String id) {

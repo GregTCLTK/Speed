@@ -108,7 +108,11 @@ public class Rethink {
     }
 
     public String getGlobal(String guild_id) {
-        return (String) this.get("guilds", "id", guild_id, "channel");
+        if (this.get("guilds", "id", guild_id, "channel") == null) {
+            return null;
+        } else {
+            return (String) this.get("guilds", "id", guild_id, "channel");
+        }
     }
 
     public void insertUser(String id) {

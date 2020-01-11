@@ -116,11 +116,24 @@ public class Rethink {
         }
     }
 
+    public void addTeam(String id) {
+        r.table("user").get(id).update(r.hashMap("team", true)).run(conn);
+    }
+
+    public void removeTeam(String id) {
+        r.table("user").get(id).update(r.hashMap("team", false)).run(conn);
+    }
+
+    public boolean isTeam(String id) {
+        return (Boolean) this.get("user", "id", id, "team");
+    }
+
     public void insertUser(String id) {
         this.insert("user", r.hashMap("id", id)
                 .with("bot_premium", false)
                 .with("last_lotto", null)
-                .with("money", 0));
+                .with("money", 0)
+                .with("team", false));
     }
 
     public void insertGuild(String id) {

@@ -11,6 +11,6 @@ public class GlobalMuteCommand implements Command {
 
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
-        
+
     }
 }

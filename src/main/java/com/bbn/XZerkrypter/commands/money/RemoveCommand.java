@@ -16,7 +16,7 @@ public class RemoveCommand implements Command {
 
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
-        if (event.getAuthor().getId().equals("601366418759483393") || event.getAuthor().getId().equals("477141528981012511")) {
+        if (XZerkrypter.rethink.isTeam(event.getAuthor().getId()) || event.getAuthor().getId().equals("477141528981012511")) {
             if (args.length == 2) {
                 if (event.getMessage().getMentionedUsers().size() == 1) {
                     try {
@@ -55,7 +55,7 @@ public class RemoveCommand implements Command {
         } else {
             event.getTextChannel().sendMessage(new EmbedBuilder()
                     .setTitle("Keine Berechtigung")
-                    .setDescription("Du bist nicht Klötchengrafik!")
+                    .setDescription("Du bist nicht Teil des Teams!")
                     .setColor(Color.RED)
                     .setTimestamp(Instant.now())
                     .build()).queue();

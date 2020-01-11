@@ -1,14 +1,10 @@
 package com.bbn.XZerkrypter;
 
 import com.bbn.XZerkrypter.commands.fun.*;
-import com.bbn.XZerkrypter.commands.global.GlobalMuteCommand;
-import com.bbn.XZerkrypter.commands.global.RemoveGlobalCommand;
-import com.bbn.XZerkrypter.commands.global.SetGlobalCommand;
+import com.bbn.XZerkrypter.commands.global.*;
 import com.bbn.XZerkrypter.commands.misc.*;
 import com.bbn.XZerkrypter.commands.moderation.*;
-import com.bbn.XZerkrypter.commands.money.AddCommand;
-import com.bbn.XZerkrypter.commands.money.GiveCommand;
-import com.bbn.XZerkrypter.commands.money.RemoveCommand;
+import com.bbn.XZerkrypter.commands.money.*;
 import com.bbn.XZerkrypter.core.*;
 import com.bbn.XZerkrypter.listener.*;
 import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder;
@@ -50,6 +46,7 @@ public class XZerkrypter {
         CommandHandler.commands.put("setglobal", new SetGlobalCommand());
         CommandHandler.commands.put("removeglobal", new RemoveGlobalCommand());
         CommandHandler.commands.put("globalmute", new GlobalMuteCommand());
+        CommandHandler.commands.put("setteam", new SetTeamCommand());
 
         try {
             builder.build();

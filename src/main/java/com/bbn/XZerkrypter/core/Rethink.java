@@ -52,9 +52,17 @@ public class Rethink {
         else return null;
     }
 
-    private void update(String table, String value, String what, String whatvalue) {
+    private void update(String table, String where, String what, String value) {
         try {
-            r.table(table).get(value).update(r.hashMap(what, whatvalue)).run(conn);
+            r.table(table).get(where).update(r.hashMap(what, value)).run(conn);
+        } catch (ClassCastException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void update(String table, String where, String what, boolean value) {
+        try {
+            r.table(table).get(where).update(r.hashMap(what, value)).run(conn);
         } catch (ClassCastException e) {
             e.printStackTrace();
         }
@@ -73,7 +81,7 @@ public class Rethink {
     }
 
     public void setBotPremium(String id) {
-        r.table("user").get(id).update(r.hashMap("bot_premium", true)).run(conn);
+        this.update("user", id, "bot_premium", true);
     }
 
     public boolean isBotPremium(String id) {
@@ -92,7 +100,7 @@ public class Rethink {
         }
     }
 
-    public void setMoney(String id, int amount) {
+    public void setMoney(String id, int amount) { ;
         r.table("user").get(id).update(r.hashMap("money", amount)).run(conn);
     }
 
@@ -117,11 +125,11 @@ public class Rethink {
     }
 
     public void addTeam(String id) {
-        r.table("user").get(id).update(r.hashMap("team", true)).run(conn);
+        this.update("user", id, "team", true);
     }
 
     public void removeTeam(String id) {
-        r.table("user").get(id).update(r.hashMap("team", false)).run(conn);
+        this.update("user", id, "team", false);
     }
 
     public boolean isTeam(String id) {
@@ -129,7 +137,7 @@ public class Rethink {
     }
 
     public void setMuted(String id, boolean b) {
-        r.table("user").get(id).update(r.hashMap("muted", b)).run(conn);
+        this.update("user", id, "muted", b);
     }
 
     public boolean isMuted(String id) {

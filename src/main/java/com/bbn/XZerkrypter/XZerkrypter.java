@@ -24,7 +24,12 @@ public class XZerkrypter {
 
         DefaultShardManagerBuilder builder = new DefaultShardManagerBuilder();
         builder.setToken(SECRETS.Token);
-        builder.addEventListeners(new ReadyListener(), new CommandListener(), new GlobalListener(), new GuildListener());
+        builder.addEventListeners(
+                new ReadyListener(),
+                new CommandListener(),
+                new GlobalListener(),
+                new GuildListener(),
+                new UserListener());
         builder.setAutoReconnect(true);
 
         CommandHandler.commands.put("ban", new BanCommand());

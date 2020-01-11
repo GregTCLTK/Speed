@@ -133,4 +133,8 @@ public class Rethink {
     public void removeGuild(String id) {
         this.remove("guilds", "id", id);
     }
+
+    public void removeUser(String id) {
+        this.remove("user", "id", id);
+    }
 }

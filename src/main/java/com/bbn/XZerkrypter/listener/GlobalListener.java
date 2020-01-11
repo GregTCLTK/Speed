@@ -24,7 +24,6 @@ public class GlobalListener extends ListenerAdapter {
                 event.getMessage().delete().queue();
                 for (Guild g : event.getJDA().getGuilds()) {
                     if (XZerkrypter.rethink.hasGlobal(g.getId())) {
-                        System.out.println(XZerkrypter.rethink.getGlobal(g.getId()));
                         EmbedBuilder eb = new EmbedBuilder()
                                 .setAuthor(event.getAuthor().getAsTag(), event.getAuthor().getAvatarUrl(), event.getAuthor().getAvatarUrl())
                                 .setThumbnail(event.getGuild().getIconUrl())

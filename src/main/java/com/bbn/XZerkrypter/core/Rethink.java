@@ -7,6 +7,7 @@ package com.bbn.XZerkrypter.core;
 import com.rethinkdb.RethinkDB;
 import com.rethinkdb.net.Connection;
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.time.Instant;
 import java.util.NoSuchElementException;
@@ -104,11 +105,11 @@ public class Rethink {
     }
 
     public boolean hasGlobal(String guild_id) {
-        return this.get("guilds", "id", guild_id, "channel") != null;
+        return !JSONObject.NULL.equals(this.get("guilds", "id", guild_id, "channel"));
     }
 
     public String getGlobal(String guild_id) {
-        if (this.get("guilds", "id", guild_id, "channel") == null) {
+        if (JSONObject.NULL.equals(this.get("guilds", "id", guild_id, "channel"))) {
             return null;
         } else {
             return (String) this.get("guilds", "id", guild_id, "channel");

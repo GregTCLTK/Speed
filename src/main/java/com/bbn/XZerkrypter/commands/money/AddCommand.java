@@ -32,13 +32,15 @@ public class AddCommand implements Command {
                                 .setColor(Color.GREEN)
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
-                    } catch (Exception e) {
+                    } catch (NumberFormatException e) {
                         event.getTextChannel().sendMessage(new EmbedBuilder()
                                 .setTitle("Falsche Nutzung")
                                 .setDescription("Du musst eine Zahl angeben.")
                                 .setColor(Color.RED)
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
                 } else {
                     event.getTextChannel().sendMessage(new EmbedBuilder()

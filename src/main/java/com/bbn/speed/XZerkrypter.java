@@ -1,13 +1,12 @@
-package com.bbn.XZerkrypter;
+package com.bbn.speed;
 
-import com.bbn.XZerkrypter.commands.Command;
-import com.bbn.XZerkrypter.commands.fun.*;
-import com.bbn.XZerkrypter.commands.global.*;
-import com.bbn.XZerkrypter.commands.misc.*;
-import com.bbn.XZerkrypter.commands.moderation.*;
-import com.bbn.XZerkrypter.commands.money.*;
-import com.bbn.XZerkrypter.core.*;
-import com.bbn.XZerkrypter.listener.*;
+import com.bbn.speed.commands.fun.*;
+import com.bbn.speed.commands.global.*;
+import com.bbn.speed.commands.misc.*;
+import com.bbn.speed.commands.moderation.*;
+import com.bbn.speed.commands.money.*;
+import com.bbn.speed.core.*;
+import com.bbn.speed.listener.*;
 import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder;
 
 import javax.security.auth.login.LoginException;

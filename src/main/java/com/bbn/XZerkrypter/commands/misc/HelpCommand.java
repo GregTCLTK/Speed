@@ -32,6 +32,7 @@ public class HelpCommand implements Command {
                 .addField("?give", "Gibt einem anderem Benutzer eine bestimmte Anzahl von Bäumen", true)
                 .addField("?setglobal", "Legt den Channel für den globalen Chat fest", true)
                 .addField("?removeglobal", "Entfernt den Channel für den globalen Chat", true)
+                .addField("?globalmute", "Schaltet User für den globalen Chat stumm", true)
                 .setColor(Color.GREEN)
                 .setTimestamp(Instant.now())
                 .build()).queue();

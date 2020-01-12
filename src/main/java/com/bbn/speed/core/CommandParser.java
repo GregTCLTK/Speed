@@ -1,4 +1,4 @@
-package com.bbn.XZerkrypter.core;
+package com.bbn.speed.core;
 
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 

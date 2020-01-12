@@ -1,11 +1,11 @@
-package com.bbn.XZerkrypter.commands.fun;
+package com.bbn.speed.commands.fun;
 
 /*
  * @Author Skidder / GregTCLTK
  */
 
-import com.bbn.XZerkrypter.XZerkrypter;
-import com.bbn.XZerkrypter.commands.Command;
+import com.bbn.speed.Speed;
+import com.bbn.speed.commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import okhttp3.OkHttpClient;
@@ -22,7 +22,7 @@ public class MemeCommand implements Command {
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
 
-        if (XZerkrypter.rethink.isBotPremium(event.getAuthor().getId())) {
+        if (Speed.rethink.isBotPremium(event.getAuthor().getId())) {
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder().url("https://some-random-api.ml/meme").build();
 

@@ -1,11 +1,11 @@
-package com.bbn.XZerkrypter.commands.misc;
+package com.bbn.speed.commands.misc;
 
 /*
  * @Author Skidder / GregTCLTK
  */
 
-import com.bbn.XZerkrypter.XZerkrypter;
-import com.bbn.XZerkrypter.commands.Command;
+import com.bbn.speed.Speed;
+import com.bbn.speed.commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
@@ -18,14 +18,14 @@ public class StatsCommand implements Command {
     public void action(String[] args, MessageReceivedEvent event) {
         EmbedBuilder eb = new EmbedBuilder();
 
-        if (XZerkrypter.rethink.isBotPremium(event.getAuthor().getId())) {
+        if (Speed.rethink.isBotPremium(event.getAuthor().getId())) {
             eb.addField("Bot Plus", "ja", true);
         } else {
             eb.addField("Bot Plus", "nein", true);
         }
         event.getTextChannel().sendMessage(eb
                 .setTitle("Deine Statistiken")
-                .addField("Bäume", String.valueOf(XZerkrypter.rethink.getMoney(event.getAuthor().getId())), true)
+                .addField("Bäume", String.valueOf(Speed.rethink.getMoney(event.getAuthor().getId())), true)
                 .setColor(Color.GREEN)
                 .setTimestamp(Instant.now())
                 .build()).queue();

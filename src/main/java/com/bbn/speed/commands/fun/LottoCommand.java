@@ -1,11 +1,11 @@
-package com.bbn.XZerkrypter.commands.fun;
+package com.bbn.speed.commands.fun;
 
 /*
  * @Author Skidder / GregTCLTK
  */
 
-import com.bbn.XZerkrypter.XZerkrypter;
-import com.bbn.XZerkrypter.commands.Command;
+import com.bbn.speed.Speed;
+import com.bbn.speed.commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -17,9 +17,9 @@ public class LottoCommand implements Command {
 
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
-        if (XZerkrypter.rethink.getLottoTime(event.getAuthor().getId()) == null) {
+        if (Speed.rethink.getLottoTime(event.getAuthor().getId()) == null) {
             lotto(event);
-        } else if (XZerkrypter.rethink.getLottoTime(event.getAuthor().getId()).isBefore(Instant.now().minusSeconds(21600L))) {
+        } else if (Speed.rethink.getLottoTime(event.getAuthor().getId()).isBefore(Instant.now().minusSeconds(21600L))) {
             lotto(event);
         } else event.getTextChannel().sendMessage(new EmbedBuilder()
                 .setTitle("Nicht möglich")
@@ -50,8 +50,8 @@ public class LottoCommand implements Command {
                         .build()).queue();
             }
         } else if (botplus) {
-            if (!XZerkrypter.rethink.isBotPremium(event.getAuthor().getId())) {
-                XZerkrypter.rethink.setBotPremium(event.getAuthor().getId());
+            if (!Speed.rethink.isBotPremium(event.getAuthor().getId())) {
+                Speed.rethink.setBotPremium(event.getAuthor().getId());
                 event.getTextChannel().sendMessage(new EmbedBuilder()
                         .setTitle("Gewonnen!")
                         .setDescription("Herzlichen Glückwunsch du hast soeben den Bot Plus Status gewonnen!")
@@ -74,6 +74,6 @@ public class LottoCommand implements Command {
                     .setTimestamp(Instant.now())
                     .build()).queue();
         }
-        XZerkrypter.rethink.setLottoTime(Instant.now(), event.getAuthor().getId());
+        Speed.rethink.setLottoTime(Instant.now(), event.getAuthor().getId());
     }
 }

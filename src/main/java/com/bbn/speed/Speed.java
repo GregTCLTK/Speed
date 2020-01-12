@@ -11,7 +11,7 @@ import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder;
 
 import javax.security.auth.login.LoginException;
 
-public class XZerkrypter {
+public class Speed {
 
     public static Rethink rethink = new Rethink();
 

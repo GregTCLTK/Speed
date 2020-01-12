@@ -1,9 +1,8 @@
-package com.bbn.XZerkrypter.commands.moderation;
+package com.bbn.speed.commands.moderation;
 
-import com.bbn.XZerkrypter.commands.Command;
+import com.bbn.speed.commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.Permission;
-import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 import java.awt.*;

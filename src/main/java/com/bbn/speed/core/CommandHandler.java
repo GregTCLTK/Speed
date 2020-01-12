@@ -1,6 +1,6 @@
-package com.bbn.XZerkrypter.core;
+package com.bbn.speed.core;
 
-import com.bbn.XZerkrypter.commands.Command;
+import com.bbn.speed.commands.Command;
 
 import java.util.HashMap;
 

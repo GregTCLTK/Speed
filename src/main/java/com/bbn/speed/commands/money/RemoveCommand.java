@@ -1,11 +1,11 @@
-package com.bbn.XZerkrypter.commands.money;
+package com.bbn.speed.commands.money;
 
 /*
  * @Author Skidder / GregTCLTK
  */
 
-import com.bbn.XZerkrypter.XZerkrypter;
-import com.bbn.XZerkrypter.commands.Command;
+import com.bbn.speed.Speed;
+import com.bbn.speed.commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
@@ -16,12 +16,12 @@ public class RemoveCommand implements Command {
 
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
-        if (XZerkrypter.rethink.isTeam(event.getAuthor().getId()) || event.getAuthor().getId().equals("477141528981012511")) {
+        if (Speed.rethink.isTeam(event.getAuthor().getId()) || event.getAuthor().getId().equals("477141528981012511")) {
             if (args.length == 2) {
                 if (event.getMessage().getMentionedUsers().size() == 1) {
                     try {
                         int amount = Integer.parseInt(args[1]);
-                        XZerkrypter.rethink.setMoney(event.getMessage().getMentionedUsers().get(0).getId(), XZerkrypter.rethink.getMoney(event.getMessage().getMentionedUsers().get(0).getId()) - amount);
+                        Speed.rethink.setMoney(event.getMessage().getMentionedUsers().get(0).getId(), Speed.rethink.getMoney(event.getMessage().getMentionedUsers().get(0).getId()) - amount);
                         event.getTextChannel().sendMessage(new EmbedBuilder()
                                 .setTitle("Erfolgreich entfernt")
                                 .setDescription(event.getMessage().getMentionedUsers().get(0).getName() + " hat erfolgreich " + amount + " Bäume verloren.")

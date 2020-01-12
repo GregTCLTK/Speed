@@ -1,10 +1,10 @@
-package com.bbn.XZerkrypter.commands.misc;
+package com.bbn.speed.commands.misc;
 
 /*
  * @Author Skidder / GregTCLTK
  */
 
-import com.bbn.XZerkrypter.commands.Command;
+import com.bbn.speed.commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 

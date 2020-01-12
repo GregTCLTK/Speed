@@ -1,6 +1,6 @@
-package com.bbn.XZerkrypter.listener;
+package com.bbn.speed.listener;
 
-import com.bbn.XZerkrypter.core.CommandHandler;
+import com.bbn.speed.core.CommandHandler;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 

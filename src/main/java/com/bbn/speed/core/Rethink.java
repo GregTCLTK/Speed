@@ -1,4 +1,4 @@
-package com.bbn.XZerkrypter.core;
+package com.bbn.speed.core;
 
 /*
  * @Author Skidder / GregTCLTK

@@ -1,11 +1,11 @@
-package com.bbn.XZerkrypter.commands.misc;
+package com.bbn.speed.commands.misc;
 
 /*
  * @Author Skidder / GregTCLTK
  */
 
-import com.bbn.XZerkrypter.XZerkrypter;
-import com.bbn.XZerkrypter.commands.Command;
+import com.bbn.speed.Speed;
+import com.bbn.speed.commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -20,7 +20,7 @@ public class AddTeamCommand implements Command {
         if (event.getAuthor().getId().equals("601366418759483393") || event.getAuthor().getId().equals("477141528981012511")) {
             if (event.getMessage().getMentionedUsers().size() > 0) {
                 for (User u : event.getMessage().getMentionedUsers()) {
-                    XZerkrypter.rethink.addTeam(u.getId());
+                    Speed.rethink.addTeam(u.getId());
                 }
                 event.getTextChannel().sendMessage(new EmbedBuilder()
                         .setTitle("Erfolgreich hinzugefügt")

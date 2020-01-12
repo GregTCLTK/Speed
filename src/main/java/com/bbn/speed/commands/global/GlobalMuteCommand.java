@@ -1,11 +1,11 @@
-package com.bbn.XZerkrypter.commands.global;
+package com.bbn.speed.commands.global;
 
 /*
  * @Author Skidder / GregTCLTK
  */
 
-import com.bbn.XZerkrypter.XZerkrypter;
-import com.bbn.XZerkrypter.commands.Command;
+import com.bbn.speed.Speed;
+import com.bbn.speed.commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -17,13 +17,13 @@ public class GlobalMuteCommand implements Command {
 
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
-        if (XZerkrypter.rethink.isTeam(event.getAuthor().getId())) {
+        if (Speed.rethink.isTeam(event.getAuthor().getId())) {
             if (event.getMessage().getMentionedUsers().size() > 0) {
                 for (User u : event.getMessage().getMentionedUsers()) {
-                    if (XZerkrypter.rethink.isMuted(u.getId())) {
-                        XZerkrypter.rethink.setMuted(u.getId(), false);
+                    if (Speed.rethink.isMuted(u.getId())) {
+                        Speed.rethink.setMuted(u.getId(), false);
                     } else {
-                        XZerkrypter.rethink.setMuted(u.getId(), true);
+                        Speed.rethink.setMuted(u.getId(), true);
                     }
                 }
                 event.getTextChannel().sendMessage(new EmbedBuilder()

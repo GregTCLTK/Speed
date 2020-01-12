@@ -1,9 +1,6 @@
-package com.bbn.XZerkrypter.listener;
+package com.bbn.speed.listener;
 
-import com.bbn.XZerkrypter.XZerkrypter;
-import com.bbn.XZerkrypter.core.GameAnimator;
-import net.dv8tion.jda.api.entities.Guild;
-import net.dv8tion.jda.api.entities.User;
+import com.bbn.speed.core.GameAnimator;
 import net.dv8tion.jda.api.events.ReadyEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 

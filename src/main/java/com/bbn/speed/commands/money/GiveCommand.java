@@ -1,11 +1,11 @@
-package com.bbn.XZerkrypter.commands.money;
+package com.bbn.speed.commands.money;
 
 /*
  * @Author Skidder / GregTCLTK
  */
 
-import com.bbn.XZerkrypter.XZerkrypter;
-import com.bbn.XZerkrypter.commands.Command;
+import com.bbn.speed.Speed;
+import com.bbn.speed.commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
@@ -24,9 +24,9 @@ public class GiveCommand implements Command {
             if (event.getMessage().getMentionedUsers().size() == 1) {
                 try {
                     int amount = Integer.parseInt(args[1]);
-                    if (XZerkrypter.rethink.getMoney(event.getAuthor().getId()) == amount || XZerkrypter.rethink.getMoney(event.getAuthor().getId()) > amount) {
-                        XZerkrypter.rethink.setMoney(event.getMessage().getMentionedUsers().get(0).getId(), XZerkrypter.rethink.getMoney(event.getMessage().getMentionedUsers().get(0).getId()) + amount);
-                        XZerkrypter.rethink.setMoney(event.getAuthor().getId(), XZerkrypter.rethink.getMoney(event.getAuthor().getId()) - amount);
+                    if (Speed.rethink.getMoney(event.getAuthor().getId()) == amount || Speed.rethink.getMoney(event.getAuthor().getId()) > amount) {
+                        Speed.rethink.setMoney(event.getMessage().getMentionedUsers().get(0).getId(), Speed.rethink.getMoney(event.getMessage().getMentionedUsers().get(0).getId()) + amount);
+                        Speed.rethink.setMoney(event.getAuthor().getId(), Speed.rethink.getMoney(event.getAuthor().getId()) - amount);
                         event.getTextChannel().sendMessage(new EmbedBuilder()
                                 .setTitle("Erfolgreich abgegeben")
                                 .setDescription(event.getMessage().getMentionedUsers().get(0).getName() + " hat erfolgreich " + amount + " Bäume erhalten.")

@@ -1,11 +1,11 @@
-package com.bbn.XZerkrypter.commands.fun;
+package com.bbn.speed.commands.fun;
 
 /*
  * @Author Skidder / GregTCLTK
  */
 
-import com.bbn.XZerkrypter.XZerkrypter;
-import com.bbn.XZerkrypter.commands.Command;
+import com.bbn.speed.Speed;
+import com.bbn.speed.commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -18,7 +18,7 @@ public class SelbstzerstoerungCommand implements Command {
 
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
-        if (XZerkrypter.rethink.isBotPremium(event.getAuthor().getId())) {
+        if (Speed.rethink.isBotPremium(event.getAuthor().getId())) {
             boolean random = Math.random() < 0.50;
             Message msg = event.getTextChannel().sendMessage("Leite Selbstzerstörung ein in 5... :bomb:").complete();
             if (random) {

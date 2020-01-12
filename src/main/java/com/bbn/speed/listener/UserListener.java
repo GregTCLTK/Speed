@@ -1,10 +1,10 @@
-package com.bbn.XZerkrypter.listener;
+package com.bbn.speed.listener;
 
 /*
  * @Author Skidder / GregTCLTK
  */
 
-import com.bbn.XZerkrypter.XZerkrypter;
+import com.bbn.speed.Speed;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberLeaveEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -15,7 +15,7 @@ public class UserListener extends ListenerAdapter {
 
     @Override
     public void onGuildMemberJoin(@Nonnull GuildMemberJoinEvent event) {
-        XZerkrypter.rethink.insertUser(event.getUser().getId());
+        Speed.rethink.insertUser(event.getUser().getId());
         super.onGuildMemberJoin(event);
     }
 

@@ -1,10 +1,10 @@
-package com.bbn.XZerkrypter.listener;
+package com.bbn.speed.listener;
 
 /*
  * @Author Skidder / GregTCLTK
  */
 
-import com.bbn.XZerkrypter.XZerkrypter;
+import com.bbn.speed.Speed;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -20,11 +20,11 @@ public class GlobalListener extends ListenerAdapter {
     @Override
     public void onMessageReceived(@Nonnull MessageReceivedEvent event) {
         if (!event.getAuthor().isBot()) {
-            if (XZerkrypter.rethink.hasGlobal(event.getGuild().getId()) && event.getChannel().equals(event.getGuild().getTextChannelById(XZerkrypter.rethink.getGlobal(event.getGuild().getId())))) {
+            if (Speed.rethink.hasGlobal(event.getGuild().getId()) && event.getChannel().equals(event.getGuild().getTextChannelById(Speed.rethink.getGlobal(event.getGuild().getId())))) {
                 event.getMessage().delete().queue();
-                if (!XZerkrypter.rethink.isMuted(event.getAuthor().getId())) {
+                if (!Speed.rethink.isMuted(event.getAuthor().getId())) {
                     for (Guild g : event.getJDA().getGuilds()) {
-                        if (XZerkrypter.rethink.hasGlobal(g.getId())) {
+                        if (Speed.rethink.hasGlobal(g.getId())) {
                             EmbedBuilder eb = new EmbedBuilder()
                                     .setAuthor(event.getAuthor().getAsTag(), event.getAuthor().getAvatarUrl(), event.getAuthor().getAvatarUrl())
                                     .setThumbnail(event.getGuild().getIconUrl())
@@ -35,11 +35,11 @@ public class GlobalListener extends ListenerAdapter {
 
                             if (event.getAuthor().getId().equals("601366418759483393")) {
                                 eb.setColor(Color.RED).setTitle("**\uD83D\uDC51 Inhaber**");
-                            } else if (XZerkrypter.rethink.isTeam(event.getAuthor().getId())) {
+                            } else if (Speed.rethink.isTeam(event.getAuthor().getId())) {
                                 eb.setColor(Color.BLUE).setAuthor("⚒ " + event.getAuthor().getAsTag(), event.getAuthor().getAvatarUrl(), event.getAuthor().getAvatarUrl());
                             }
 
-                            Objects.requireNonNull(g.getTextChannelById(XZerkrypter.rethink.getGlobal(g.getId()))).sendMessage(eb.build()).queue();
+                            Objects.requireNonNull(g.getTextChannelById(Speed.rethink.getGlobal(g.getId()))).sendMessage(eb.build()).queue();
                         }
                     }
                 } else {

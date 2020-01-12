@@ -100,7 +100,7 @@ public class Rethink {
         }
     }
 
-    public void setMoney(String id, int amount) { ;
+    public void setMoney(String id, int amount) {
         r.table("user").get(id).update(r.hashMap("money", amount)).run(conn);
     }
 

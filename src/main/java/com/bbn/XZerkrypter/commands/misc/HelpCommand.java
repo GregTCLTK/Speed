@@ -33,6 +33,8 @@ public class HelpCommand implements Command {
                 .addField("?setglobal", "Legt den Channel für den globalen Chat fest", true)
                 .addField("?removeglobal", "Entfernt den Channel für den globalen Chat", true)
                 .addField("?globalmute", "Schaltet User für den globalen Chat stumm", true)
+                .addField("?addteam", "Fügt User dem Team hinzu", true)
+                .addField("?removeteam", "Entfernt User aus dem Team", true)
                 .setColor(Color.GREEN)
                 .setTimestamp(Instant.now())
                 .build()).queue();

@@ -32,6 +32,12 @@ public class GlobalMuteCommand implements Command {
                         .setColor(Color.GREEN)
                         .setTimestamp(Instant.now())
                         .build()).queue();
+            } else if (args[0].length() == 18) {
+                if (Speed.rethink.isMuted(args[0])) {
+                    Speed.rethink.setMuted(args[0], false);
+                } else {
+                    Speed.rethink.setMuted(args[0], true);
+                }
             } else {
                 event.getTextChannel().sendMessage(new EmbedBuilder()
                         .setTitle("Falsche Nutzung")

@@ -21,7 +21,7 @@ public class UserListener extends ListenerAdapter {
 
     @Override
     public void onGuildMemberLeave(@Nonnull GuildMemberLeaveEvent event) {
-        XZerkrypter.rethink.removeUser(event.getUser().getId());
+        //XZerkrypter.rethink.removeUser(event.getUser().getId());
         super.onGuildMemberLeave(event);
     }
 }

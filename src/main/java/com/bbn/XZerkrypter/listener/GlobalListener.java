@@ -36,7 +36,7 @@ public class GlobalListener extends ListenerAdapter {
                             if (event.getAuthor().getId().equals("601366418759483393")) {
                                 eb.setColor(Color.RED).setTitle("**\uD83D\uDC51 Inhaber**");
                             } else if (XZerkrypter.rethink.isTeam(event.getAuthor().getId())) {
-                                eb.setColor(Color.BLUE).setTitle("**" + event.getGuild().getName() + "**").setAuthor("⚒ " + event.getAuthor().getAsTag(), event.getAuthor().getAvatarUrl(), event.getAuthor().getAvatarUrl());
+                                eb.setColor(Color.BLUE).setAuthor("⚒ " + event.getAuthor().getAsTag(), event.getAuthor().getAvatarUrl(), event.getAuthor().getAvatarUrl());
                             }
 
                             Objects.requireNonNull(g.getTextChannelById(XZerkrypter.rethink.getGlobal(g.getId()))).sendMessage(eb.build()).queue();

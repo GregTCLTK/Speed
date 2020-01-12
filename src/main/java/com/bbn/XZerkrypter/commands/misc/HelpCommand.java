@@ -24,7 +24,7 @@ public class HelpCommand implements Command {
                 .addField("?ban", "Bannt einen Benutzer", true)
                 .addField("?clear 99", "Löscht die angegebene Anzahl von Nachrichten", true)
                 .addField("?meme", "Sendet ein zufälliges Meme", true)
-                .addField("?selbstzersörung", "Leitet die Selbstzerstörung ein", true)
+                .addField("?selbstzerstörung", "Leitet die Selbstzerstörung ein", true)
                 .addField("?lotto", "Gibt die die Chance Premium oder Bot Plus zu gewinnen", true)
                 .addField("?stats", "Zeigt deine Stats an", true)
                 .addField("?add", "Gibt einem Benutzer Bäume (Nur für Klötchengrafik)", true)

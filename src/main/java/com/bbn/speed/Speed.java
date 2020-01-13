@@ -48,6 +48,7 @@ public class Speed {
         CommandHandler.commands.put("globalmute", new GlobalMuteCommand());
         CommandHandler.commands.put("addteam", new AddTeamCommand());
         CommandHandler.commands.put("removeteam", new RemoveTeamCommand());
+        CommandHandler.commands.put("daily", new DailyCommand());
 
         try {
             builder.build();

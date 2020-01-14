@@ -49,7 +49,8 @@ public class Speed {
         CommandHandler.commands.put("addteam", new AddTeamCommand());
         CommandHandler.commands.put("removeteam", new RemoveTeamCommand());
         CommandHandler.commands.put("daily", new DailyCommand());
-
+        CommandHandler.commands.put("work", new WorkCommand());
+        
         try {
             builder.build();
         } catch (LoginException e) {

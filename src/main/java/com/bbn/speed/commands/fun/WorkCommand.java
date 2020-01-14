@@ -31,11 +31,6 @@ public class WorkCommand implements Command {
     private void work(MessageReceivedEvent event) {
         Speed.rethink.setWorkTime(Instant.now(), event.getAuthor().getId());
         Speed.rethink.setMoney(event.getAuthor().getId(), Speed.rethink.getMoney(event.getAuthor().getId()) + 150);
-        event.getTextChannel().sendMessage(new EmbedBuilder()
-                .setTitle("Erfolgreich abgeholt")
-                .setDescription("Du hast erfolgreich deine tägliche Belohnung abgeholt.")
-                .setColor(Color.GREEN)
-                .setTimestamp(Instant.now())
-                .build()).queue();
+        //TODO: Do math stuff and work messages ;)
     }
 }

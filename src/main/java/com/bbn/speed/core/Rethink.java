@@ -156,11 +156,24 @@ public class Rethink {
         }
     }
 
+    public void setWorkTime(Instant time, String id) {
+        this.update("user", id, "last_work", time.toString());
+    }
+
+    public Instant getWorkTime(String id) {
+        try {
+            return Instant.parse((CharSequence) this.get("user", "id", id, "last_work"));
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
     public void insertUser(String id) {
         this.insert("user", r.hashMap("id", id)
                 .with("bot_premium", false)
                 .with("last_lotto", null)
                 .with("last_daily", null)
+                .with("last_work", null)
                 .with("money", 0)
                 .with("team", false)
                 .with("muted", false));

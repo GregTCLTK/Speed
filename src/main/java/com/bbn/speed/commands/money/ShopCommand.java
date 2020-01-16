@@ -1,9 +1,5 @@
 package com.bbn.speed.commands.money;
 
-/*
- * @Author Skidder / GregTCLTK
- */
-
 import com.bbn.speed.commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;

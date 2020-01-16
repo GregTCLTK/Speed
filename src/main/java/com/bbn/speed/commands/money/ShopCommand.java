@@ -1,4 +1,4 @@
-package com.bbn.speed.commands.fun;
+package com.bbn.speed.commands.money;
 
 /*
  * @Author Skidder / GregTCLTK
@@ -10,6 +10,10 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 import java.awt.*;
 import java.time.Instant;
+
+/*
+ * @Author Skidder / GregTCLTK
+ */
 
 public class ShopCommand implements Command {
 

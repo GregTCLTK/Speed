@@ -17,7 +17,7 @@ public class BuyCommand implements Command {
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
         if (args.length > 0) {
-            if (args[0].equals("premium")) {
+            if (args[0].equalsIgnoreCase("premium")) {
                 if (Speed.rethink.getMoney(event.getAuthor().getId()) > 8000 || Speed.rethink.getMoney(event.getAuthor().getId()) == 8000) {
                     try {
                         event.getGuild().addRoleToMember(event.getMember(), event.getJDA().getGuildById("662472489317695490").getRoleById("664367891839189015")).reason("Premium gekauft").queue();
@@ -29,6 +29,7 @@ public class BuyCommand implements Command {
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
                     } catch (Exception e) {
+                        e.printStackTrace();
                         event.getTextChannel().sendMessage(new EmbedBuilder()
                                 .setTitle("Nicht möglich")
                                 .setDescription("Du musst auf dem offiziellen Speed Server sein um die Premium kaufen zu können.")

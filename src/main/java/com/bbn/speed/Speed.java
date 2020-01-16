@@ -51,6 +51,7 @@ public class Speed {
         CommandHandler.commands.put("daily", new DailyCommand());
         CommandHandler.commands.put("work", new WorkCommand());
         CommandHandler.commands.put("shop", new ShopCommand());
+        CommandHandler.commands.put("buy", new BuyCommand());
 
         try {
             builder.build();

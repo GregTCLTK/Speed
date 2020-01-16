@@ -30,7 +30,7 @@ public class WorkCommand implements Command {
     }
 
     private void work(MessageReceivedEvent event) {
-        int i = new Random().nextInt(10);
+        int i = new Random().nextInt(5);
         Random r = new Random();
         int low = 20;
         int high = 70;
@@ -38,31 +38,56 @@ public class WorkCommand implements Command {
 
         switch (i) {
             case 0:
+                event.getTextChannel().sendMessage(new EmbedBuilder()
+                        .setTitle("Erfolgreich gearbeitet")
+                        .setDescription("Du hast bei Angela Merkel als Putzfrau gearbeitet und erhälst dafür " + salary + " Bäume.")
+                        .setColor(Color.MAGENTA)
+                        .setTimestamp(Instant.now())
+                        .build()).queue();
                 break;
             case 1:
+                event.getTextChannel().sendMessage(new EmbedBuilder()
+                        .setTitle("Erfolgreich gearbeitet")
+                        .setDescription("Du hast im US-Verteidigungsministerium die Toiletten sauber gemacht und erhältst dafür " + salary + " Bäume.")
+                        .setColor(Color.MAGENTA)
+                        .setTimestamp(Instant.now())
+                        .build()).queue();
                 break;
             case 2:
+                event.getTextChannel().sendMessage(new EmbedBuilder()
+                        .setTitle("Erfolgreich gearbeitet")
+                        .setDescription("Du hast als Supporter bei Microsoft " + salary + " Bäume verdient.")
+                        .setColor(Color.MAGENTA)
+                        .setTimestamp(Instant.now())
+                        .build()).queue();
                 break;
             case 3:
+                event.getTextChannel().sendMessage(new EmbedBuilder()
+                        .setTitle("Erfolgreich gearbeitet")
+                        .setDescription("Du hast erfolgreich an der Rezeption eines 5 Sterne Hotels gearbeitet und erhältst dafür " + salary + " Bäume.")
+                        .setColor(Color.MAGENTA)
+                        .setTimestamp(Instant.now())
+                        .build()).queue();
                 break;
             case 4:
+                event.getTextChannel().sendMessage(new EmbedBuilder()
+                        .setTitle("Erfolgreich gearbeitet")
+                        .setDescription("Du hast als Full Stack Developer bei Discord " + salary + " Bäume verdient.")
+                        .setColor(Color.MAGENTA)
+                        .setTimestamp(Instant.now())
+                        .build()).queue();
                 break;
             case 5:
-                break;
-            case 6:
-                break;
-            case 7:
-                break;
-            case 8:
-                break;
-            case 9:
-                break;
-            case 10:
+                event.getTextChannel().sendMessage(new EmbedBuilder()
+                        .setTitle("Erfolgreich gearbeitet")
+                        .setDescription("Du hast in einer Grundschule Mathe unterrichtet und " + salary + " Bäume verdient.")
+                        .setColor(Color.MAGENTA)
+                        .setTimestamp(Instant.now())
+                        .build()).queue();
                 break;
         }
         Speed.rethink.setMoney(event.getAuthor().getId(), Speed.rethink.getMoney(event.getAuthor().getId()) + salary);
         Speed.rethink.setWorkTime(Instant.now(), event.getAuthor().getId());
         Speed.rethink.setMoney(event.getAuthor().getId(), Speed.rethink.getMoney(event.getAuthor().getId()) + 150);
-        //TODO: Do math stuff and work messages ;)
     }
 }

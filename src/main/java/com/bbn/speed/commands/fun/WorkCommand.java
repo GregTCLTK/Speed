@@ -31,6 +31,10 @@ public class WorkCommand implements Command {
 
     private void work(MessageReceivedEvent event) {
         int i = new Random().nextInt(10);
+        Random r = new Random();
+        int low = 20;
+        int high = 70;
+        int salary = r.nextInt(high-low) + low;
 
         switch (i) {
             case 0:
@@ -56,6 +60,7 @@ public class WorkCommand implements Command {
             case 10:
                 break;
         }
+        Speed.rethink.setMoney(event.getAuthor().getId(), Speed.rethink.getMoney(event.getAuthor().getId()) + salary);
         Speed.rethink.setWorkTime(Instant.now(), event.getAuthor().getId());
         Speed.rethink.setMoney(event.getAuthor().getId(), Speed.rethink.getMoney(event.getAuthor().getId()) + 150);
         //TODO: Do math stuff and work messages ;)

@@ -35,6 +35,7 @@ public class HelpCommand implements Command {
                 .addField("?globalmute", "Schaltet User für den globalen Chat stumm", true)
                 .addField("?addteam", "Fügt User dem Team hinzu", true)
                 .addField("?removeteam", "Entfernt User aus dem Team", true)
+                .addField("?work", "Arbeitet um Geld zu verdienen.", true)
                 .setColor(Color.GREEN)
                 .setTimestamp(Instant.now())
                 .build()).queue();

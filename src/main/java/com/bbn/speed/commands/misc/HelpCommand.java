@@ -37,6 +37,7 @@ public class HelpCommand implements Command {
                 .addField("?removeteam", "Entfernt User aus dem Team", true)
                 .addField("?work", "Arbeitet um Geld zu verdienen", true)
                 .addField("?shop", "Zeigt den aktuellen Shop an", true)
+                .addField("?buy", "Kauft einen Gegenstand aus dem Shop", true)
                 .setColor(Color.GREEN)
                 .setTimestamp(Instant.now())
                 .build()).queue();

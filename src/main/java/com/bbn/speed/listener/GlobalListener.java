@@ -21,7 +21,7 @@ public class GlobalListener extends ListenerAdapter {
     public void onMessageReceived(@Nonnull MessageReceivedEvent event) {
         if (!event.getAuthor().isBot() && Speed.rethink.hasGlobal(event.getGuild().getId()) && event.getChannel().equals(event.getGuild().getTextChannelById(Speed.rethink.getGlobal(event.getGuild().getId())))) {
             event.getMessage().delete().queue();
-            if (!Speed.rethink.isMuted(event.getAuthor().getId())) {
+            if (!Speed.rethink.isUserMuted(event.getAuthor().getId())) {
                 for (Guild g : event.getJDA().getGuilds()) {
                     if (Speed.rethink.hasGlobal(g.getId())) {
                         EmbedBuilder eb = new EmbedBuilder()

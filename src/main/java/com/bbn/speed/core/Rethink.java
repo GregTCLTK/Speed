@@ -136,11 +136,11 @@ public class Rethink {
         return (Boolean) this.get("user", "id", id, "team");
     }
 
-    public void setMuted(String id, boolean b) {
+    public void setUserMute(String id, boolean b) {
         this.update("user", id, "muted", b);
     }
 
-    public boolean isMuted(String id) {
+    public boolean isUserMuted(String id) {
         return (Boolean) this.get("user", "id", id, "muted");
     }
 
@@ -168,6 +168,15 @@ public class Rethink {
         }
     }
 
+    public void setGuildMute(String id, boolean b) {
+        this.update("guilds", id, "muted", b);
+    }
+
+    public boolean isGuildMuted(String id) {
+        return (Boolean) this.get("guilds", "id", id, "muted");
+    }
+
+
     public void insertUser(String id) {
         this.insert("user", r.hashMap("id", id)
                 .with("bot_premium", false)
@@ -183,6 +192,7 @@ public class Rethink {
         this.insert("guilds", r
                 .hashMap("id", id)
                 .with("channel", null)
+                .with("muted", false)
         );
     }
 

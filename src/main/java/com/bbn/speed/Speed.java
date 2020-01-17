@@ -52,6 +52,8 @@ public class Speed {
         CommandHandler.commands.put("work", new WorkCommand());
         CommandHandler.commands.put("shop", new ShopCommand());
         CommandHandler.commands.put("buy", new BuyCommand());
+        CommandHandler.commands.put("rob", new RobCommand());
+        CommandHandler.commands.put("serverban", new ServerBanCommand());
 
         try {
             builder.build();

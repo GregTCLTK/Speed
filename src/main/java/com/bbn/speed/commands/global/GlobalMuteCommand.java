@@ -19,8 +19,8 @@ public class GlobalMuteCommand implements Command {
     public void action(String[] args, MessageReceivedEvent event) {
         if (Speed.rethink.isTeam(event.getAuthor().getId())) {
             if (event.getMessage().getMentionedUsers().size() == 1) {
-                if (Speed.rethink.isMuted(event.getMessage().getMentionedUsers().get(0).getId())) {
-                    Speed.rethink.setMuted(event.getMessage().getMentionedUsers().get(0).getId(), false);
+                if (Speed.rethink.isUserMuted(event.getMessage().getMentionedUsers().get(0).getId())) {
+                    Speed.rethink.setUserMute(event.getMessage().getMentionedUsers().get(0).getId(), false);
                     event.getTextChannel().sendMessage(new EmbedBuilder()
                             .setTitle("Erfolgreich ausgeführt")
                             .setDescription("Ich habe erfolgreich " + event.getMessage().getMentionedUsers().get(0).getAsTag() + " entmuted.")
@@ -28,7 +28,7 @@ public class GlobalMuteCommand implements Command {
                             .setTimestamp(Instant.now())
                             .build()).queue();
                 } else {
-                    Speed.rethink.setMuted(event.getMessage().getMentionedUsers().get(0).getId(), true);
+                    Speed.rethink.setUserMute(event.getMessage().getMentionedUsers().get(0).getId(), true);
                     event.getTextChannel().sendMessage(new EmbedBuilder()
                             .setTitle("Erfolgreich ausgeführt")
                             .setDescription("Ich habe erfolgreich " + event.getMessage().getMentionedUsers().get(0).getAsTag() + " gemuted.")
@@ -39,8 +39,8 @@ public class GlobalMuteCommand implements Command {
             } else if (args[0].length() == 18) {
                 try {
                     User u = event.getJDA().getUserById(args[0]);
-                    if (Speed.rethink.isMuted(u.getId())) {
-                        Speed.rethink.setMuted(u.getId(), false);
+                    if (Speed.rethink.isUserMuted(u.getId())) {
+                        Speed.rethink.setUserMute(u.getId(), false);
                         event.getTextChannel().sendMessage(new EmbedBuilder()
                                 .setTitle("Erfolgreich ausgeführt")
                                 .setDescription("Ich habe erfolgreich " + u.getAsTag() + " entmuted.")
@@ -48,7 +48,7 @@ public class GlobalMuteCommand implements Command {
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
                     } else {
-                        Speed.rethink.setMuted(u.getId(), true);
+                        Speed.rethink.setUserMute(u.getId(), true);
                         event.getTextChannel().sendMessage(new EmbedBuilder()
                                 .setTitle("Erfolgreich ausgeführt")
                                 .setDescription("Ich habe erfolgreich " + u.getAsTag() + " gemuted.")

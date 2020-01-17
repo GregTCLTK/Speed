@@ -20,7 +20,7 @@ public class MuteCommand implements Command {
             if (event.getMessage().getMentionedMembers().size() > 0) {
                 try {
                     event.getGuild().getRolesByName("Muted", true).get(0);
-                    event.getGuild().addRoleToMember(event.getMessage().getMentionedMembers().get(0), event.getGuild().getRolesByName("Muted", true).get(0)).reason("Gemuted von " + event.getAuthor().getAsTag()).queue();;
+                    event.getGuild().addRoleToMember(event.getMessage().getMentionedMembers().get(0), event.getGuild().getRolesByName("Muted", true).get(0)).reason("Gemuted von " + event.getAuthor().getAsTag()).queue();
                 } catch (Exception e) {
                     event.getTextChannel().sendMessage(new EmbedBuilder()
                             .setTitle("Keine Mute Rolle")

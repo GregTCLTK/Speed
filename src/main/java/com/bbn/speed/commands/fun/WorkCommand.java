@@ -19,7 +19,7 @@ public class WorkCommand implements Command {
     public void action(String[] args, MessageReceivedEvent event) {
         if (Speed.rethink.getWorkTime(event.getAuthor().getId()) == null) {
             work(event);
-        } else if (Speed.rethink.getWorkTime(event.getAuthor().getId()).isBefore(Instant.now().minusSeconds(10000L))) {
+        } else if (Speed.rethink.getWorkTime(event.getAuthor().getId()).isBefore(Instant.now().minusSeconds(1800L))) {
             work(event);
         } else event.getTextChannel().sendMessage(new EmbedBuilder()
                 .setTitle("Nicht möglich")

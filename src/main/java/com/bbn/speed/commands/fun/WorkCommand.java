@@ -30,7 +30,7 @@ public class WorkCommand implements Command {
     }
 
     private void work(MessageReceivedEvent event) {
-        int i = new Random().nextInt(5);
+        int i = new Random().nextInt(11);
         Random r = new Random();
         int low = 20;
         int high = 70;
@@ -81,6 +81,54 @@ public class WorkCommand implements Command {
                 event.getTextChannel().sendMessage(new EmbedBuilder()
                         .setTitle("Erfolgreich gearbeitet")
                         .setDescription("Du hast in einer Grundschule Mathe unterrichtet und " + salary + " Bäume verdient.")
+                        .setColor(Color.MAGENTA)
+                        .setTimestamp(Instant.now())
+                        .build()).queue();
+                break;
+            case 6:
+                event.getTextChannel().sendMessage(new EmbedBuilder()
+                        .setTitle("Erfolgreich gearbeitet")
+                        .setDescription("Du hast Minecraft nachprogrammiert und dafür " + salary + " Bäume erhalten.")
+                        .setColor(Color.MAGENTA)
+                        .setTimestamp(Instant.now())
+                        .build()).queue();
+                break;
+            case 7:
+                event.getTextChannel().sendMessage(new EmbedBuilder()
+                        .setTitle("Erfolgreich gearbeitet")
+                        .setDescription("Du hast auf der Baustelle gearbeitet und somit " + salary + "Bäume verdient!")
+                        .setColor(Color.MAGENTA)
+                        .setTimestamp(Instant.now())
+                        .build()).queue();
+                break;
+            case 8:
+                event.getTextChannel().sendMessage(new EmbedBuilder()
+                        .setTitle("Erfolgreich gearbeitet")
+                        .setDescription("Du hast deiner Oma geholfen einen Virus von ihrem Gerät zu entfernen und verdienst dadurch " + salary + " Bäume.")
+                        .setColor(Color.MAGENTA)
+                        .setTimestamp(Instant.now())
+                        .build()).queue();
+                break;
+            case 9:
+                event.getTextChannel().sendMessage(new EmbedBuilder()
+                        .setTitle("Erfolgreich gearbeitet")
+                        .setDescription("Du hast einem Kind geholfen die Leiter hochzuklettern, und verdienst somit " + salary + " Bäume.")
+                        .setColor(Color.MAGENTA)
+                        .setTimestamp(Instant.now())
+                        .build()).queue();
+                break;
+            case 10:
+                event.getTextChannel().sendMessage(new EmbedBuilder()
+                        .setTitle("Erfolgreich gearbeitet")
+                        .setDescription("Du schreibst eine Zeitung und verdienst " + salary + " Bäume.")
+                        .setColor(Color.MAGENTA)
+                        .setTimestamp(Instant.now())
+                        .build()).queue();
+                break;
+            case 11:
+                event.getTextChannel().sendMessage(new EmbedBuilder()
+                        .setTitle("Erfolgreich gearbeitet")
+                        .setDescription("Du teilst 22 Zeitungen aus und verdienst damit " + salary + " Bäume.")
                         .setColor(Color.MAGENTA)
                         .setTimestamp(Instant.now())
                         .build()).queue();

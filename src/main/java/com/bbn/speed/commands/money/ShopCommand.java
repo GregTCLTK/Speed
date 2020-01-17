@@ -19,6 +19,7 @@ public class ShopCommand implements Command {
                 .setTitle("Shop")
                 .setDescription("Die hier aufgelisteten Sachen gibt es zur Zeit im Shop.")
                 .addField("Premium", "8000 Bäume", true)
+                .addField("Gott des Lichtes", "12000 Bäume", true)
                 .setColor(Color.GREEN)
                 .setTimestamp(Instant.now())
                 .build()).queue();

@@ -19,7 +19,7 @@ public class WorkCommand implements Command {
     public void action(String[] args, MessageReceivedEvent event) {
         if (Speed.rethink.getWorkTime(event.getAuthor().getId()) == null) {
             work(event);
-        } else if (Speed.rethink.getWorkTime(event.getAuthor().getId()).isBefore(Instant.now().minusSeconds(1800000L))) {
+        } else if (Speed.rethink.getWorkTime(event.getAuthor().getId()).isBefore(Instant.now().minusSeconds(10000L))) {
             work(event);
         } else event.getTextChannel().sendMessage(new EmbedBuilder()
                 .setTitle("Nicht möglich")
@@ -88,6 +88,5 @@ public class WorkCommand implements Command {
         }
         Speed.rethink.setMoney(event.getAuthor().getId(), Speed.rethink.getMoney(event.getAuthor().getId()) + salary);
         Speed.rethink.setWorkTime(Instant.now(), event.getAuthor().getId());
-        Speed.rethink.setMoney(event.getAuthor().getId(), Speed.rethink.getMoney(event.getAuthor().getId()) + 150);
     }
 }

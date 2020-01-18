@@ -28,7 +28,7 @@ public class GlobalListener extends ListenerAdapter {
                             EmbedBuilder eb = new EmbedBuilder()
                                     .setAuthor(event.getAuthor().getAsTag(), event.getAuthor().getAvatarUrl(), event.getAuthor().getAvatarUrl())
                                     .setThumbnail(event.getGuild().getIconUrl())
-                                    .setTitle("**" + event.getGuild().getName() + "**")
+                                    .setTitle("**" + event.getGuild().getName().replaceAll("\uD83D\uDC51 Inhaber", "Server") + "**")
                                     .setDescription(event.getMessage().getContentRaw())
                                     .setFooter("Message provided by Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                                     .setTimestamp(Instant.now());

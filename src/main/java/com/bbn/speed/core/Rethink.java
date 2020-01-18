@@ -189,7 +189,8 @@ public class Rethink {
     }
 
     public void insertUser(String id) {
-        this.insert("user", r.hashMap("id", id)
+        this.insert("user", r
+                .hashMap("id", id)
                 .with("bot_premium", false)
                 .with("last_lotto", null)
                 .with("last_daily", null)

@@ -176,6 +176,17 @@ public class Rethink {
         return (Boolean) this.get("guilds", "id", id, "muted");
     }
 
+    public void setRobTime(Instant time, String id) {
+        this.update("user", id, "last_rob", time.toString());
+    }
+
+    public Instant getRobTime(String id) {
+        try {
+            return Instant.parse((CharSequence) this.get("user", "id", id, "last_rob"));
+        } catch (Exception e) {
+            return null;
+        }
+    }
 
     public void insertUser(String id) {
         this.insert("user", r.hashMap("id", id)

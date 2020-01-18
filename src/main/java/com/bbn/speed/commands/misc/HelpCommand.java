@@ -39,6 +39,7 @@ public class HelpCommand implements Command {
                 .addField("?shop", "Zeigt den aktuellen Shop an", true)
                 .addField("?buy", "Kauft einen Gegenstand aus dem Shop", true)
                 .addField("?serverban", "Schaltet Server für den globalen Chat stumm", true)
+                .addField("?rob", "Raubt den angegebenen User aus", true)
                 .setColor(Color.GREEN)
                 .setTimestamp(Instant.now())
                 .build()).queue();

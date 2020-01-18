@@ -42,17 +42,18 @@ public class RobCommand implements Command {
         boolean success = Math.random() < 0.35;
         if (success) {
             int money = (int)(Speed.rethink.getMoney(u.getId())*(19.0f/100.0f));
-            event.getGuild().addRoleToMember(event.getMember(), event.getJDA().getGuildById("662472489317695490").getRoleById("664367891839189015")).reason("Im Lotto gewonnen").queue();
+            Speed.rethink.setMoney(u.getId(), Speed.rethink.getMoney(u.getId()) - money);
+            Speed.rethink.setMoney(event.getAuthor().getId(), Speed.rethink.getMoney(event.getAuthor().getId()) + money);
             event.getTextChannel().sendMessage(new EmbedBuilder()
-                    .setTitle("Gewonnen!")
-                    .setDescription("Herzlichen Glückwunsch du hast soeben die Premium Rolle gewonnen!")
-                    .setColor(Color.magenta)
+                    .setTitle("Erfolgreich ausgeraubt")
+                    .setDescription("Du hast `" + u.getName() + "` erfolgreich ausgeraubt.")
+                    .setColor(Color.GREEN)
                     .setTimestamp(Instant.now())
                     .build()).queue();
         } else {
             event.getTextChannel().sendMessage(new EmbedBuilder()
-                    .setTitle("Nicht möglich")
-                    .setDescription("Du kannst nur alle acht Minuten den Rob Command nutzen.")
+                    .setTitle("Fehlgeschlagen")
+                    .setDescription("Du wurdest beim Verusch `" + u.getName() + "` auszurauben erwischt!")
                     .setColor(Color.RED)
                     .setTimestamp(Instant.now())
                     .build()).queue();

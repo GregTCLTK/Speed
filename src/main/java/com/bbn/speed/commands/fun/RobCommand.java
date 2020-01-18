@@ -51,9 +51,11 @@ public class RobCommand implements Command {
                     .setTimestamp(Instant.now())
                     .build()).queue();
         } else {
+            int money = (int)(Speed.rethink.getMoney(event.getAuthor().getId())*(12.0f/100.0f));
+            Speed.rethink.setMoney(event.getAuthor().getId(), Speed.rethink.getMoney(event.getAuthor().getId()) - money);
             event.getTextChannel().sendMessage(new EmbedBuilder()
                     .setTitle("Fehlgeschlagen")
-                    .setDescription("Du wurdest beim Verusch `" + u.getName() + "` auszurauben erwischt!")
+                    .setDescription("Du wurdest beim Verusch `" + u.getName() + "` auszurauben erwischt! Dadurch verlierst du " + money + " Bäume.")
                     .setColor(Color.RED)
                     .setTimestamp(Instant.now())
                     .build()).queue();

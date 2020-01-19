@@ -16,7 +16,7 @@ public class Speed {
     public static Rethink rethink = new Rethink();
 
     public static void main(String[] Args) {
-        Config config = new Config("./config.json");
+        Config config = new Config("./Speed_config.json");
         config.load();
 
         rethink.connect();

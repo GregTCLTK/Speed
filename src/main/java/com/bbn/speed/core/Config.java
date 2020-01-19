@@ -25,7 +25,7 @@ public class Config {
     }
 
     public String getToken() {
-        return config.getString("BotToken");
+        return config.getString("Token");
     }
 
 }

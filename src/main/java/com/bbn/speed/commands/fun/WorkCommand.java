@@ -23,7 +23,7 @@ public class WorkCommand implements Command {
             work(event);
         } else event.getTextChannel().sendMessage(new EmbedBuilder()
                 .setTitle("Nicht möglich")
-                .setDescription("Du kannst nur alle 30 Minuten arbeiten gehen.")
+                .setDescription("Du musst noch " + 5  + " Minuten warten bis du wieder arbeiten gehen kannst.")
                 .setColor(Color.RED)
                 .setTimestamp(Instant.now())
                 .build()).queue();

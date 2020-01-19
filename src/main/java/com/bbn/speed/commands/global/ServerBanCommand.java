@@ -34,7 +34,7 @@ public class ServerBanCommand implements Command {
                             Speed.rethink.setGuildMute(g.getId(), true);
                             event.getTextChannel().sendMessage(new EmbedBuilder()
                                     .setTitle("Erfolgreich ausgeführt")
-                                    .setDescription("Ich habe erfolgreich den Server \" + g.getName() + \" gemuted.")
+                                    .setDescription("Ich habe erfolgreich den Server " + g.getName() + " gemuted.")
                                     .setColor(Color.GREEN)
                                     .setTimestamp(Instant.now())
                                     .build()).queue();

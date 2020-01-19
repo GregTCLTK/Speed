@@ -10,7 +10,9 @@ import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 import java.awt.*;
+import java.time.Duration;
 import java.time.Instant;
+import java.time.LocalTime;
 import java.util.Random;
 
 public class WorkCommand implements Command {
@@ -21,12 +23,15 @@ public class WorkCommand implements Command {
             work(event);
         } else if (Speed.rethink.getWorkTime(event.getAuthor().getId()).isBefore(Instant.now().minusSeconds(1800L))) {
             work(event);
-        } else event.getTextChannel().sendMessage(new EmbedBuilder()
-                .setTitle("Nicht möglich")
-                .setDescription("Du musst noch " + 5  + " Minuten warten bis du wieder arbeiten gehen kannst.")
-                .setColor(Color.RED)
-                .setTimestamp(Instant.now())
-                .build()).queue();
+        } else {
+            Duration between = Duration.between(Instant.now(), Speed.rethink.getWorkTime(event.getAuthor().getId()).plusSeconds(1800L));
+            event.getTextChannel().sendMessage(new EmbedBuilder()
+                    .setTitle("Nicht möglich")
+                    .setDescription("Du kannst erneut in `" + LocalTime.MIN.plusSeconds(between.getSeconds()).toString() + "` Minuten arbeiten.")
+                    .setColor(Color.RED)
+                    .setTimestamp(Instant.now())
+                    .build()).queue();
+        }
     }
 
     private void work(MessageReceivedEvent event) {

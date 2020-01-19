@@ -24,8 +24,6 @@ hs_err_pid*
 
 .idea/
 
-src/main/java/com/bbn/speed/core/SECRETS.java
-
-src/main/java/com/bbn/speed/SECRETS.java
+config.json
 
 X-Zerkrypt-er.iml

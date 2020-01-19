@@ -19,10 +19,10 @@ public class Rethink {
     public void connect() {
         try {
             conn = r.connection()
-                    .hostname(SECRETS.IP)
+                    .hostname("localhost")
                     .db("Speed")
                     .port(28015)
-                    .user(SECRETS.username, SECRETS.password)
+                    .user("admin", "")
                     .connect();
             System.out.println("DB CONNECTED");
         } catch (Exception e) {

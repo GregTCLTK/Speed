@@ -16,11 +16,13 @@ public class Speed {
     public static Rethink rethink = new Rethink();
 
     public static void main(String[] Args) {
+        Config config = new Config("./config.json");
+        config.load();
 
         rethink.connect();
 
         DefaultShardManagerBuilder builder = new DefaultShardManagerBuilder();
-        builder.setToken(SECRETS.Token);
+        builder.setToken(config.getToken());
         builder.addEventListeners(
                 new ReadyListener(),
                 new CommandListener(),

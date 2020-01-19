@@ -20,7 +20,7 @@ public class BuyCommand implements Command {
             if (args[0].equalsIgnoreCase("premium")) {
                 if (Speed.rethink.getMoney(event.getAuthor().getId()) > 8000 || Speed.rethink.getMoney(event.getAuthor().getId()) == 8000) {
                     try {
-                        event.getGuild().addRoleToMember(event.getMember(), event.getJDA().getGuildById("662472489317695490").getRoleById("INSERT LATER")).reason("Im Shop gekauft").queue();
+                        event.getGuild().addRoleToMember(event.getMember(), event.getJDA().getGuildById("662472489317695490").getRoleById("664367891839189015")).reason("Im Shop gekauft").queue();
                         Speed.rethink.setMoney(event.getAuthor().getId(), Speed.rethink.getMoney(event.getAuthor().getId()) - 8000);
                         event.getTextChannel().sendMessage(new EmbedBuilder()
                                 .setTitle("Erfolgreich gekauft")
@@ -48,7 +48,7 @@ public class BuyCommand implements Command {
             } else if (args[0].equalsIgnoreCase("gott des lichtes")) {
                 if (Speed.rethink.getMoney(event.getAuthor().getId()) > 12000 || Speed.rethink.getMoney(event.getAuthor().getId()) == 12000) {
                     try {
-                        event.getGuild().addRoleToMember(event.getMember(), event.getJDA().getGuildById("662472489317695490").getRoleById("INSERT LATER")).reason("Im Shop gekauft").queue();
+                        event.getGuild().addRoleToMember(event.getMember(), event.getJDA().getGuildById("662472489317695490").getRoleById("668524384272646186")).reason("Im Shop gekauft").queue();
                         Speed.rethink.setMoney(event.getAuthor().getId(), Speed.rethink.getMoney(event.getAuthor().getId()) - 12000);
                         event.getTextChannel().sendMessage(new EmbedBuilder()
                                 .setTitle("Erfolgreich gekauft")

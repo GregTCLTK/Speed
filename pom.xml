@@ -57,21 +57,6 @@
                     <target>13</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <configuration>
-                    <finalName>Hadder-Build</finalName>
-                    <archive>
-                        <manifest>
-                            <mainClass>com.bbn.hadder.Hadder</mainClass>
-                        </manifest>
-                    </archive>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                    <appendAssemblyId>false</appendAssemblyId>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 </project>

@@ -8,6 +8,7 @@ import com.bbn.speed.commands.money.*;
 import com.bbn.speed.core.*;
 import com.bbn.speed.listener.*;
 import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder;
+import net.dv8tion.jda.api.utils.ChunkingFilter;
 
 import javax.security.auth.login.LoginException;
 
@@ -30,6 +31,7 @@ public class Speed {
                 new GuildListener(),
                 new UserListener());
         builder.setAutoReconnect(true);
+        builder.setChunkingFilter(ChunkingFilter.NONE);
 
         CommandHandler.commands.put("ban", new BanCommand());
         CommandHandler.commands.put("kick", new KickCommand());

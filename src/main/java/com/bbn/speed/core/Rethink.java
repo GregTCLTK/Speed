@@ -188,6 +188,14 @@ public class Rethink {
         }
     }
 
+    public void setHelp(String id) {
+
+    }
+
+    public boolean isHelp(String id) {
+        return false;
+    }
+
     public void insertUser(String id) {
         this.insert("user", r
                 .hashMap("id", id)

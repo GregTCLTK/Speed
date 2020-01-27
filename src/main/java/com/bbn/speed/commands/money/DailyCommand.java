@@ -25,7 +25,7 @@ public class DailyCommand implements Command {
                     .setColor(Color.GREEN)
                     .setTimestamp(Instant.now())
                     .build()).queue();
-        } else if (Speed.rethink.getDailyTime(event.getAuthor().getId()).isBefore(Instant.now().minusSeconds(86400000L))) {
+        } else if (Speed.rethink.getDailyTime(event.getAuthor().getId()).isBefore(Instant.now().minusSeconds(86400L))) {
             Speed.rethink.setDailyTime(Instant.now(), event.getAuthor().getId());
             Speed.rethink.setMoney(event.getAuthor().getId(), Speed.rethink.getMoney(event.getAuthor().getId()) + 150);
             event.getTextChannel().sendMessage(new EmbedBuilder()

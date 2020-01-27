@@ -24,10 +24,10 @@ public class HelpCommand implements Command {
                     .setColor(Color.GREEN)
                     .setTimestamp(Instant.now())
                     .build()).queue((message -> {
-                message.addReaction(1 + "\u20E3").queue();
-                message.addReaction(2 + "\u20E3").queue();
-                message.addReaction(3 + "\u20E3").queue();
-                message.addReaction(4 + "\u20E3").queue();
+                        message.addReaction(1 + "\u20E3").queue();
+                        message.addReaction(2 + "\u20E3").queue();
+                        message.addReaction(3 + "\u20E3").queue();
+                        message.addReaction(4 + "\u20E3").queue();
                 Speed.rethink.setHelp(message.getId());
             }));
         } else {
@@ -47,12 +47,6 @@ public class HelpCommand implements Command {
         /*
         event.getTextChannel().sendMessage(new EmbedBuilder()
                 .setTitle("Hilfe")
-                .addField("?unmute", "Entmutet einen Benutzer", true)
-                .addField("?mute", "Mutet einen Benutzer", true)
-                .addField("?unban", "Entbannt einen Benutzer", true)
-                .addField("?kick", "Kickt einen Benutzer", true)
-                .addField("?ban", "Bannt einen Benutzer", true)
-                .addField("?clear 99", "Löscht die angegebene Anzahl von Nachrichten", true)
                 .addField("?meme", "Sendet ein zufälliges Meme", true)
                 .addField("?selbstzerstörung", "Leitet die Selbstzerstörung ein", true)
                 .addField("?lotto", "Gibt die die Chance Premium oder Bot Plus zu gewinnen", true)

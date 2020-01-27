@@ -20,7 +20,7 @@ public class HelpCommand implements Command {
         if (event.getGuild().getSelfMember().hasPermission(Permission.MESSAGE_MANAGE) && event.getGuild().getSelfMember().hasPermission(Permission.MESSAGE_ADD_REACTION)) {
             event.getTextChannel().sendMessage(new EmbedBuilder()
                     .setTitle("Hilfe")
-                    .setDescription("Bitte wähle die Kategorie zu der du Hilfe benötigst.\n:one: Number one dann hier\n:two: Jooo\n:three: Digga was\n:four: Final yk")
+                    .setDescription("Bitte wähle die Kategorie zu der du Hilfe benötigst.\n\n:one: Moderation\n:two: Money\n:three: Fun\n:four: Global")
                     .setColor(Color.GREEN)
                     .setTimestamp(Instant.now())
                     .build()).queue((message -> {
@@ -33,7 +33,7 @@ public class HelpCommand implements Command {
         } else {
             event.getAuthor().openPrivateChannel().complete().sendMessage(new EmbedBuilder()
                     .setTitle("Hilfe")
-                    .setDescription("Bitte wähle die Kategorie zu der du Hilfe benötigst.\n:one: Number one dann hier\n:two: Jooo\n:three: Digga was\n:four: Final yk")
+                    .setDescription("Bitte wähle die Kategorie zu der du Hilfe benötigst.\n\n:one: Moderation\n:two: Money\n:three: Fun\n:four: Global")
                     .setColor(Color.GREEN)
                     .setTimestamp(Instant.now())
                     .build()).queue((message -> {

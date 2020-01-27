@@ -1,4 +1,4 @@
-package com.bbn.speed.commands.fun;
+package com.bbn.speed.commands.money;
 
 /*
  * @Author Skidder / GregTCLTK

@@ -7,6 +7,7 @@ package com.bbn.speed.commands.misc;
 import com.bbn.speed.Speed;
 import com.bbn.speed.commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 import java.awt.*;
@@ -16,18 +17,33 @@ public class HelpCommand implements Command {
 
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
-        event.getTextChannel().sendMessage(new EmbedBuilder()
-                .setTitle("Hilfe")
-                .setDescription("Dies das yk")
-                .setColor(Color.GREEN)
-                .setTimestamp(Instant.now())
-                .build()).queue((message -> {
-            message.addReaction(1 + "\u20E3").queue();
-            message.addReaction(2 + "\u20E3").queue();
-            message.addReaction(3 + "\u20E3").queue();
-            message.addReaction(4 + "\u20E3").queue();
-            Speed.rethink.setHelp(message.getId());
-        }));
+        if (event.getGuild().getSelfMember().hasPermission(Permission.MESSAGE_MANAGE)) {
+            event.getTextChannel().sendMessage(new EmbedBuilder()
+                    .setTitle("Hilfe")
+                    .setDescription("Bitte wähle die Kategorie zu der du Hilfe benötigst.\n:one: Number one dann hier\n:two: Jooo\n:three: Digga was\n:four: Final yk")
+                    .setColor(Color.GREEN)
+                    .setTimestamp(Instant.now())
+                    .build()).queue((message -> {
+                message.addReaction(1 + "\u20E3").queue();
+                message.addReaction(2 + "\u20E3").queue();
+                message.addReaction(3 + "\u20E3").queue();
+                message.addReaction(4 + "\u20E3").queue();
+                Speed.rethink.setHelp(message.getId());
+            }));
+        } else {
+            event.getAuthor().openPrivateChannel().complete().sendMessage(new EmbedBuilder()
+                    .setTitle("Hilfe")
+                    .setDescription("Bitte wähle die Kategorie zu der du Hilfe benötigst.\n:one: Number one dann hier\n:two: Jooo\n:three: Digga was\n:four: Final yk")
+                    .setColor(Color.GREEN)
+                    .setTimestamp(Instant.now())
+                    .build()).queue((message -> {
+                message.addReaction(1 + "\u20E3").queue();
+                message.addReaction(2 + "\u20E3").queue();
+                message.addReaction(3 + "\u20E3").queue();
+                message.addReaction(4 + "\u20E3").queue();
+                Speed.rethink.setHelp(message.getId());
+            }));
+        }
         /*
         event.getTextChannel().sendMessage(new EmbedBuilder()
                 .setTitle("Hilfe")

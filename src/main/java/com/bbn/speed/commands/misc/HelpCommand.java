@@ -17,6 +17,18 @@ public class HelpCommand implements Command {
     public void action(String[] args, MessageReceivedEvent event) {
         event.getTextChannel().sendMessage(new EmbedBuilder()
                 .setTitle("Hilfe")
+                .setDescription("Dies das yk")
+                .setColor(Color.GREEN)
+                .setTimestamp(Instant.now())
+                .build()).queue((message -> {
+            message.addReaction(1 + "\u20E3").queue();
+            message.addReaction(2 + "\u20E3").queue();
+            message.addReaction(3 + "\u20E3").queue();
+            message.addReaction(4 + "\u20E3").queue();
+        }));
+        /*
+        event.getTextChannel().sendMessage(new EmbedBuilder()
+                .setTitle("Hilfe")
                 .addField("?unmute", "Entmutet einen Benutzer", true)
                 .addField("?mute", "Mutet einen Benutzer", true)
                 .addField("?unban", "Entbannt einen Benutzer", true)
@@ -43,5 +55,6 @@ public class HelpCommand implements Command {
                 .setColor(Color.GREEN)
                 .setTimestamp(Instant.now())
                 .build()).queue();
+         */
     }
 }

@@ -29,7 +29,8 @@ public class Speed {
                 new CommandListener(),
                 new GlobalListener(),
                 new GuildListener(),
-                new UserListener());
+                new UserListener(),
+                new HelpListener());
         builder.setAutoReconnect(true);
         builder.setChunkingFilter(ChunkingFilter.NONE);
 

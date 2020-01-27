@@ -4,6 +4,7 @@ package com.bbn.speed.commands.misc;
  * @Author Skidder / GregTCLTK
  */
 
+import com.bbn.speed.Speed;
 import com.bbn.speed.commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -25,6 +26,7 @@ public class HelpCommand implements Command {
             message.addReaction(2 + "\u20E3").queue();
             message.addReaction(3 + "\u20E3").queue();
             message.addReaction(4 + "\u20E3").queue();
+            Speed.rethink.setHelp(message.getId());
         }));
         /*
         event.getTextChannel().sendMessage(new EmbedBuilder()

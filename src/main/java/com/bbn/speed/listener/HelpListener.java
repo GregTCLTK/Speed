@@ -38,10 +38,51 @@ public class HelpListener extends ListenerAdapter {
                         });
                         break;
                     case 2 + "\u20E3":
+                        event.getTextChannel().retrieveMessageById(event.getMessageId()).complete().editMessage(new EmbedBuilder()
+                                .setTitle("Hilfe")
+                                .setDescription("Hier siehst du alle Befehle welche mit dem Geldsystem zu tun haben")
+                                .addField("?stats", "Zeigt deine Stats an", true)
+                                .addField("?give", "Gibt einem anderem Benutzer eine bestimmte Anzahl von Bäumen", true)
+                                .addField("?work", "Arbeitet um Geld zu verdienen", true)
+                                .addField("?shop", "Zeigt den aktuellen Shop an", true)
+                                .addField("?buy", "Kauft einen Gegenstand aus dem Shop", true)
+                                .addField("?rob", "Raubt den angegebenen User aus", true)
+                                .addField("?lotto", "Gibt die die Chance Premium oder Bot Plus zu gewinnen", true)
+                                .addField("?add", "Gibt einem Benutzer Bäume (Nur für Klötchengrafik)", true)
+                                .addField("?remove", "Entfernt einem Benutzer Bäume (Nur für Klötchengrafik)", true)
+                                .setColor(Color.GREEN)
+                                .setTimestamp(Instant.now())
+                                .build()).queue((message) -> {
+                            message.clearReactions().queue();
+                            message.addReaction("⏪").queue();
+                        });
                         break;
                     case 3 + "\u20E3":
+                        event.getTextChannel().retrieveMessageById(event.getMessageId()).complete().editMessage(new EmbedBuilder()
+                                .setTitle("Hilfe")
+                                .setDescription("Hier siehst du alle Fun Befehle")
+                                .addField("?meme", "Sendet ein zufälliges Meme", true)
+                                .addField("?selbstzerstörung", "Leitet die Selbstzerstörung ein", true)
+                                .setColor(Color.GREEN)
+                                .setTimestamp(Instant.now())
+                                .build()).queue((message) -> {
+                            message.clearReactions().queue();
+                            message.addReaction("⏪").queue();
+                        });
                         break;
                     case 4 + "\u20E3":
+                        event.getTextChannel().retrieveMessageById(event.getMessageId()).complete().editMessage(new EmbedBuilder()
+                                .setTitle("Hilfe")
+                                .addField("?setglobal", "Legt den Channel für den globalen Chat fest", true)
+                                .addField("?removeglobal", "Entfernt den Channel für den globalen Chat", true)
+                                .addField("?globalmute", "Schaltet User für den globalen Chat stumm", true)
+                                .addField("?serverban", "Schaltet Server für den globalen Chat stumm", true)
+                                .setColor(Color.GREEN)
+                                .setTimestamp(Instant.now())
+                                .build()).queue((message) -> {
+                            message.clearReactions().queue();
+                            message.addReaction("⏪").queue();
+                        });
                         break;
                     case "⏪":
                         event.getTextChannel().retrieveMessageById(event.getMessageId()).complete().editMessage(new EmbedBuilder()

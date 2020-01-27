@@ -44,29 +44,5 @@ public class HelpCommand implements Command {
                 Speed.rethink.setHelp(message.getId());
             }));
         }
-        /*
-        event.getTextChannel().sendMessage(new EmbedBuilder()
-                .setTitle("Hilfe")
-                .addField("?meme", "Sendet ein zufälliges Meme", true)
-                .addField("?selbstzerstörung", "Leitet die Selbstzerstörung ein", true)
-                .addField("?lotto", "Gibt die die Chance Premium oder Bot Plus zu gewinnen", true)
-                .addField("?stats", "Zeigt deine Stats an", true)
-                .addField("?add", "Gibt einem Benutzer Bäume (Nur für Klötchengrafik)", true)
-                .addField("?remove", "Entfernt einem Benutzer Bäume (Nur für Klötchengrafik)", true)
-                .addField("?give", "Gibt einem anderem Benutzer eine bestimmte Anzahl von Bäumen", true)
-                .addField("?setglobal", "Legt den Channel für den globalen Chat fest", true)
-                .addField("?removeglobal", "Entfernt den Channel für den globalen Chat", true)
-                .addField("?globalmute", "Schaltet User für den globalen Chat stumm", true)
-                .addField("?addteam", "Fügt User dem Team hinzu", true)
-                .addField("?removeteam", "Entfernt User aus dem Team", true)
-                .addField("?work", "Arbeitet um Geld zu verdienen", true)
-                .addField("?shop", "Zeigt den aktuellen Shop an", true)
-                .addField("?buy", "Kauft einen Gegenstand aus dem Shop", true)
-                .addField("?serverban", "Schaltet Server für den globalen Chat stumm", true)
-                .addField("?rob", "Raubt den angegebenen User aus", true)
-                .setColor(Color.GREEN)
-                .setTimestamp(Instant.now())
-                .build()).queue();
-         */
     }
 }

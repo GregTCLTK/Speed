@@ -29,6 +29,7 @@ public class WorkCommand implements Command {
                     .setTitle("Nicht möglich")
                     .setDescription("Du kannst erneut in `" + LocalTime.MIN.plusSeconds(between.getSeconds()).toString() + "` Minuten arbeiten.")
                     .setColor(Color.RED)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         }
@@ -47,6 +48,7 @@ public class WorkCommand implements Command {
                         .setTitle("Erfolgreich gearbeitet")
                         .setDescription("Du hast bei Angela Merkel als Putzfrau gearbeitet und erhälst dafür " + salary + " Bäume.")
                         .setColor(Color.MAGENTA)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
                 break;
@@ -55,6 +57,7 @@ public class WorkCommand implements Command {
                         .setTitle("Erfolgreich gearbeitet")
                         .setDescription("Du hast im US-Verteidigungsministerium die Toiletten sauber gemacht und erhältst dafür " + salary + " Bäume.")
                         .setColor(Color.MAGENTA)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
                 break;
@@ -63,6 +66,7 @@ public class WorkCommand implements Command {
                         .setTitle("Erfolgreich gearbeitet")
                         .setDescription("Du hast als Supporter bei Microsoft " + salary + " Bäume verdient.")
                         .setColor(Color.MAGENTA)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
                 break;
@@ -71,6 +75,7 @@ public class WorkCommand implements Command {
                         .setTitle("Erfolgreich gearbeitet")
                         .setDescription("Du hast erfolgreich an der Rezeption eines 5 Sterne Hotels gearbeitet und erhältst dafür " + salary + " Bäume.")
                         .setColor(Color.MAGENTA)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
                 break;
@@ -79,6 +84,7 @@ public class WorkCommand implements Command {
                         .setTitle("Erfolgreich gearbeitet")
                         .setDescription("Du hast als Full Stack Developer bei Discord " + salary + " Bäume verdient.")
                         .setColor(Color.MAGENTA)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
                 break;
@@ -87,6 +93,7 @@ public class WorkCommand implements Command {
                         .setTitle("Erfolgreich gearbeitet")
                         .setDescription("Du hast in einer Grundschule Mathe unterrichtet und " + salary + " Bäume verdient.")
                         .setColor(Color.MAGENTA)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
                 break;
@@ -95,6 +102,7 @@ public class WorkCommand implements Command {
                         .setTitle("Erfolgreich gearbeitet")
                         .setDescription("Du hast Minecraft nachprogrammiert und dafür " + salary + " Bäume erhalten.")
                         .setColor(Color.MAGENTA)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
                 break;
@@ -103,6 +111,7 @@ public class WorkCommand implements Command {
                         .setTitle("Erfolgreich gearbeitet")
                         .setDescription("Du hast auf der Baustelle gearbeitet und somit " + salary + "Bäume verdient!")
                         .setColor(Color.MAGENTA)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
                 break;
@@ -111,6 +120,7 @@ public class WorkCommand implements Command {
                         .setTitle("Erfolgreich gearbeitet")
                         .setDescription("Du hast deiner Oma geholfen einen Virus von ihrem Gerät zu entfernen und verdienst dadurch " + salary + " Bäume.")
                         .setColor(Color.MAGENTA)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
                 break;
@@ -119,6 +129,7 @@ public class WorkCommand implements Command {
                         .setTitle("Erfolgreich gearbeitet")
                         .setDescription("Du hast einem Kind geholfen die Leiter hochzuklettern, und verdienst somit " + salary + " Bäume.")
                         .setColor(Color.MAGENTA)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
                 break;
@@ -127,6 +138,7 @@ public class WorkCommand implements Command {
                         .setTitle("Erfolgreich gearbeitet")
                         .setDescription("Du schreibst eine Zeitung und verdienst " + salary + " Bäume.")
                         .setColor(Color.MAGENTA)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
                 break;
@@ -135,6 +147,7 @@ public class WorkCommand implements Command {
                         .setTitle("Erfolgreich gearbeitet")
                         .setDescription("Du teilst 22 Zeitungen aus und verdienst damit " + salary + " Bäume.")
                         .setColor(Color.MAGENTA)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
                 break;

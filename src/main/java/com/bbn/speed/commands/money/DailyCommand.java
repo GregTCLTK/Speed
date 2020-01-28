@@ -24,6 +24,7 @@ public class DailyCommand implements Command {
                 .setTitle("Nicht möglich")
                 .setDescription("Du kannst nur alle 24 Stunden deine tägliche Belohnung abholen.")
                 .setColor(Color.RED)
+                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                 .setTimestamp(Instant.now())
                 .build()).queue();
     }
@@ -35,6 +36,7 @@ public class DailyCommand implements Command {
                 .setTitle("Erfolgreich abgeholt")
                 .setDescription("Du hast erfolgreich deine tägliche Belohnung abgeholt.")
                 .setColor(Color.GREEN)
+                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                 .setTimestamp(Instant.now())
                 .build()).queue();
     }

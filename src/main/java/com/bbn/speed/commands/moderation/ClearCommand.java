@@ -21,14 +21,26 @@ public class ClearCommand implements Command {
                     try {
                         int nbToDelete = Integer.parseInt(args[0]);
                         if(nbToDelete < 1 || nbToDelete > 200) {
-                            event.getTextChannel().sendMessage(new EmbedBuilder().setTitle("Keine Nummer").setDescription("Du musst eine Nummer zwischen 1 und 200 angeben!").setTimestamp(Instant.now()).setColor(Color.RED).build()).queue();
+                            event.getTextChannel().sendMessage(new EmbedBuilder()
+                                    .setTitle("Keine Nummer")
+                                    .setDescription("Du musst eine Nummer zwischen 1 und 200 angeben!")
+                                    .setTimestamp(Instant.now())
+                                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
+                                    .setColor(Color.RED)
+                                    .build()).queue();
                             return;
                         }
                         List<Message> history = event.getTextChannel().getHistory().retrievePast(nbToDelete +1).complete();
                         List<Message> msgToDelete = new ArrayList<>();
                         msgToDelete.addAll(history);
                         event.getTextChannel().deleteMessages(msgToDelete).queue();
-                        event.getTextChannel().sendMessage(new EmbedBuilder().setTitle("Erfolgreich gelöscht").setDescription("Ich habe erfolgreich " + nbToDelete + " Nachrichten gelöscht.").build()).queue();
+                        event.getTextChannel().sendMessage(new EmbedBuilder()
+                                .setTitle("Erfolgreich gelöscht")
+                                .setDescription("Ich habe erfolgreich " + nbToDelete + " Nachrichten gelöscht.")
+                                .setColor(Color.GREEN)
+                                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
+                                .setTimestamp(Instant.now())
+                                .build()).queue();
                     } catch (NumberFormatException e) {
                         event.getTextChannel().sendMessage(new EmbedBuilder().setTitle("Keine Nummer").setDescription("Du musst eine Nummer zwischen 1 und 200 angeben!").setTimestamp(Instant.now()).setColor(Color.RED).build()).queue();
                     }
@@ -37,6 +49,7 @@ public class ClearCommand implements Command {
                             .setTitle("Keine Permission")
                             .setDescription("Ich benötigst die `Manage Messages` Permission um diesen Command auszuführen.")
                             .setColor(Color.RED)
+                            .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                             .setTimestamp(Instant.now())
                             .build()).queue();
                 }
@@ -45,11 +58,18 @@ public class ClearCommand implements Command {
                         .setTitle("Keine Permission")
                         .setDescription("Du benötigst die `Manage Messages` Permission um diesen Command auszuführen.")
                         .setColor(Color.RED)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
             }
         } else {
-            event.getTextChannel().sendMessage(new EmbedBuilder().setTitle("Keine Nummer").setDescription("Du musst eine Nummer zwischen 1 und 200 angeben!").setTimestamp(Instant.now()).setColor(Color.RED).build()).queue();
+            event.getTextChannel().sendMessage(new EmbedBuilder()
+                    .setTitle("Keine Nummer")
+                    .setDescription("Du musst eine Nummer zwischen 1 und 200 angeben!")
+                    .setTimestamp(Instant.now())
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
+                    .setColor(Color.RED)
+                    .build()).queue();
         }
     }
 }

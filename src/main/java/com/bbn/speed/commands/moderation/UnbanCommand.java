@@ -22,6 +22,7 @@ public class UnbanCommand implements Command {
                                 .setTitle("Erfolgreich gebannt")
                                 .setDescription("Ich habe erfolgreich " + event.getMessage().getContentRaw().replace("?unban ", "") + " entbannt.")
                                 .setColor(Color.GREEN)
+                                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
                     }
@@ -30,6 +31,7 @@ public class UnbanCommand implements Command {
                             .setTitle("Keine Permission")
                             .setDescription("Ich benötige die `Ban Members` Permission um diesen Command auszuführen.")
                             .setColor(Color.RED)
+                            .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                             .setTimestamp(Instant.now())
                             .build()).queue();
                 }
@@ -38,6 +40,7 @@ public class UnbanCommand implements Command {
                         .setTitle("Keine Permission")
                         .setDescription("Du benötigst die `Ban Members` Permission um diesen Command auszuführen.")
                         .setColor(Color.RED)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
             }
@@ -46,6 +49,7 @@ public class UnbanCommand implements Command {
                     .setTitle("Keinen User angegeben")
                     .setDescription("Du musst einen User Namen angeben also z.B. ?unban Skidder")
                     .setColor(Color.RED)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         }

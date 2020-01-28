@@ -30,6 +30,7 @@ public class AddCommand implements Command {
                                 .setTitle("Erfolgreich hinzugefügt")
                                 .setDescription(event.getMessage().getMentionedUsers().get(0).getName() + " hat erfolgreich " + amount + " Bäume erhalten.")
                                 .setColor(Color.GREEN)
+                                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
                     } catch (NumberFormatException e) {
@@ -37,6 +38,7 @@ public class AddCommand implements Command {
                                 .setTitle("Falsche Nutzung")
                                 .setDescription("Du musst eine Zahl angeben.")
                                 .setColor(Color.RED)
+                                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
                     } catch (Exception e) {
@@ -47,6 +49,7 @@ public class AddCommand implements Command {
                             .setTitle("Falsche Nutzung")
                             .setDescription("Du musst genau einen User angeben. Nicht mehr und nicht weniger.")
                             .setColor(Color.RED)
+                            .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                             .setTimestamp(Instant.now())
                             .build()).queue();
                 }
@@ -55,6 +58,7 @@ public class AddCommand implements Command {
                         .setTitle("Falsche Nutzung")
                         .setDescription("Du musst genau einen User und eine Zahl angeben.")
                         .setColor(Color.RED)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
             }
@@ -63,6 +67,7 @@ public class AddCommand implements Command {
                     .setTitle("Keine Berechtigung")
                     .setDescription("Du bist nicht Klötchengrafik!")
                     .setColor(Color.RED)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         }

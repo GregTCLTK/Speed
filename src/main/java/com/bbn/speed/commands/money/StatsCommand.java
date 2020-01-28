@@ -27,6 +27,7 @@ public class StatsCommand implements Command {
                 .setTitle("Deine Statistiken")
                 .addField("Bäume", String.valueOf(Speed.rethink.getMoney(event.getAuthor().getId())), true)
                 .setColor(Color.GREEN)
+                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                 .setTimestamp(Instant.now())
                 .build()).queue();
     }

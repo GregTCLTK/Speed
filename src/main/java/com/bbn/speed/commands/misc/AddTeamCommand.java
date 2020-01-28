@@ -26,6 +26,7 @@ public class AddTeamCommand implements Command {
                         .setTitle("Erfolgreich hinzugefügt")
                         .setDescription("Ich habe erfolgreich " + event.getMessage().getMentionedUsers().size() + " User dem Team hinzugefügt.")
                         .setColor(Color.GREEN)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
             } else {
@@ -33,6 +34,7 @@ public class AddTeamCommand implements Command {
                         .setTitle("Falsche Nutzung")
                         .setDescription("Du musst mindestens einen User angeben.")
                         .setColor(Color.RED)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
             }
@@ -41,6 +43,7 @@ public class AddTeamCommand implements Command {
                     .setTitle("Keine Berechtigung")
                     .setDescription("Du bist nicht Klötchengrafik!")
                     .setColor(Color.RED)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         }

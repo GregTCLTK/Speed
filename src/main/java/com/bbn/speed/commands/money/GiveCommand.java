@@ -31,6 +31,7 @@ public class GiveCommand implements Command {
                                 .setTitle("Erfolgreich abgegeben")
                                 .setDescription(event.getMessage().getMentionedUsers().get(0).getName() + " hat erfolgreich " + amount + " Bäume erhalten.")
                                 .setColor(Color.GREEN)
+                                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
                     } else {
@@ -38,6 +39,7 @@ public class GiveCommand implements Command {
                                 .setTitle("Keine Bäume")
                                 .setDescription("Du hast nicht genug Bäume um so viele abzugeben.")
                                 .setColor(Color.RED)
+                                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
                     }
@@ -46,6 +48,7 @@ public class GiveCommand implements Command {
                             .setTitle("Falsche Nutzung")
                             .setDescription("Du musst eine Zahl angeben.")
                             .setColor(Color.RED)
+                            .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                             .setTimestamp(Instant.now())
                             .build()).queue();
                 }
@@ -54,6 +57,7 @@ public class GiveCommand implements Command {
                         .setTitle("Falsche Nutzung")
                         .setDescription("Du musst genau einen User angeben. Nicht mehr und nicht weniger.")
                         .setColor(Color.RED)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
             }
@@ -62,6 +66,7 @@ public class GiveCommand implements Command {
                     .setTitle("Falsche Nutzung")
                     .setDescription("Du musst genau einen User und eine Zahl angeben.")
                     .setColor(Color.RED)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         }

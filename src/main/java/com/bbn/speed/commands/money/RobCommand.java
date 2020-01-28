@@ -26,6 +26,7 @@ public class RobCommand implements Command {
                     .setTitle("Nicht möglich")
                     .setDescription("Du kannst nur alle acht Minuten den Rob Command nutzen.")
                     .setColor(Color.RED)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         } else {
@@ -33,6 +34,7 @@ public class RobCommand implements Command {
                     .setTitle("Nicht möglich")
                     .setDescription("Du musst genau einern User angeben den du ausrauben möchtest.")
                     .setColor(Color.RED)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         }
@@ -48,6 +50,7 @@ public class RobCommand implements Command {
                     .setTitle("Erfolgreich ausgeraubt")
                     .setDescription("Du hast `" + u.getName() + "` erfolgreich ausgeraubt.")
                     .setColor(Color.GREEN)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         } else {
@@ -57,6 +60,7 @@ public class RobCommand implements Command {
                     .setTitle("Fehlgeschlagen")
                     .setDescription("Du wurdest beim Verusch `" + u.getName() + "` auszurauben erwischt! Dadurch verlierst du " + money + " Bäume.")
                     .setColor(Color.RED)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         }

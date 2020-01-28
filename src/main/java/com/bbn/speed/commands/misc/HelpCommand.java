@@ -22,6 +22,7 @@ public class HelpCommand implements Command {
                     .setTitle("Hilfe")
                     .setDescription("Bitte wähle die Kategorie zu der du Hilfe benötigst.\n\n:one: Moderation\n:two: Money\n:three: Fun\n:four: Global")
                     .setColor(Color.GREEN)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue((message -> {
                         message.addReaction(1 + "\u20E3").queue();
@@ -35,6 +36,7 @@ public class HelpCommand implements Command {
                     .setTitle("Hilfe")
                     .setDescription("Bitte wähle die Kategorie zu der du Hilfe benötigst.\n\n:one: Moderation\n:two: Money\n:three: Fun\n:four: Global")
                     .setColor(Color.GREEN)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue((message -> {
                 message.addReaction(1 + "\u20E3").queue();

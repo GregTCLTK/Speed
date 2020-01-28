@@ -26,6 +26,7 @@ public class UnmuteCommand implements Command {
                             .setTitle("Keine Mute Rolle")
                             .setDescription("Es existiert auf diesem Server keine Rolle mit dem Namen `muted`")
                             .setColor(Color.RED)
+                            .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                             .setTimestamp(Instant.now())
                             .build()).queue();
                 }
@@ -34,6 +35,7 @@ public class UnmuteCommand implements Command {
                         .setTitle("Keine Mention")
                         .setDescription("Du musst mindestens einen User per Mention angeben. Deine Nachricht sollte also z.B so aussehen: `?unmute @Skidder#6775`")
                         .setColor(Color.RED)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
             }
@@ -42,6 +44,7 @@ public class UnmuteCommand implements Command {
                     .setTitle("Keine Permission")
                     .setDescription("Du benötigst die `Manage Roles` Permission um diesen Command auszuführen.")
                     .setColor(Color.RED)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         }

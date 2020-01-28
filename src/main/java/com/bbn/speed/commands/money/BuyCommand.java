@@ -26,6 +26,7 @@ public class BuyCommand implements Command {
                                 .setTitle("Erfolgreich gekauft")
                                 .setDescription("Du hast dir erfolgreich Premium gekauft. Dir wurden 8000 Bäume abgezogen.")
                                 .setColor(Color.GREEN)
+                                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
                     } catch (Exception e) {
@@ -34,6 +35,7 @@ public class BuyCommand implements Command {
                                 .setTitle("Nicht möglich")
                                 .setDescription("Du musst auf dem offiziellen Speed Server sein um die Premium kaufen zu können.")
                                 .setColor(Color.RED)
+                                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
                     }
@@ -42,6 +44,7 @@ public class BuyCommand implements Command {
                             .setTitle("Keine Bäume")
                             .setDescription("Du benötigst 8000 Bäume um dir diesen Gegenstand zu kaufen.")
                             .setColor(Color.RED)
+                            .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                             .setTimestamp(Instant.now())
                             .build()).queue();
                 }
@@ -54,6 +57,7 @@ public class BuyCommand implements Command {
                                 .setTitle("Erfolgreich gekauft")
                                 .setDescription("Du hast dir erfolgreich Premium gekauft. Dir wurden 12000 Bäume abgezogen.")
                                 .setColor(Color.GREEN)
+                                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
                     } catch (Exception e) {
@@ -62,6 +66,7 @@ public class BuyCommand implements Command {
                                 .setTitle("Nicht möglich")
                                 .setDescription("Du musst auf dem offiziellen Speed Server sein um die Premium kaufen zu können.")
                                 .setColor(Color.RED)
+                                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
                     }
@@ -70,6 +75,7 @@ public class BuyCommand implements Command {
                             .setTitle("Keine Bäume")
                             .setDescription("Du benötigst 12000 Bäume um dir diesen Gegenstand zu kaufen.")
                             .setColor(Color.RED)
+                            .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                             .setTimestamp(Instant.now())
                             .build()).queue();
                 }
@@ -78,6 +84,7 @@ public class BuyCommand implements Command {
                         .setTitle("Nicht existent")
                         .setDescription("Der angegebene Gegnstand existiert nicht im Shop. Eine Liste aller Gegenstände ist mit `?shop` einsehbar.")
                         .setColor(Color.RED)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
             }
@@ -86,6 +93,7 @@ public class BuyCommand implements Command {
                     .setTitle("Kein Gegenstand")
                     .setDescription("Du musst einen Gegenstand zum Kaufen angeben. Eine Liste aller Gegenstände ist mit `?shop` einsehbar.")
                     .setColor(Color.RED)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         }

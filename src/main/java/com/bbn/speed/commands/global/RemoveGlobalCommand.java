@@ -23,6 +23,7 @@ public class RemoveGlobalCommand implements Command {
                     .setTitle("Erfolgreich entfernt")
                     .setDescription("Ich habe den Global Channel erfolgreich entfernt.")
                     .setColor(Color.GREEN)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         } else {
@@ -30,6 +31,7 @@ public class RemoveGlobalCommand implements Command {
                     .setTitle("Keine Permission")
                     .setDescription("Du benötigst die `Manage Server` Permission um diesen Command auszuführen.")
                     .setColor(Color.RED)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         }

@@ -28,6 +28,7 @@ public class ServerBanCommand implements Command {
                                     .setTitle("Erfolgreich ausgeführt")
                                     .setDescription("Ich habe erfolgreich den Server " + g.getName() + " entmuted.")
                                     .setColor(Color.GREEN)
+                                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                                     .setTimestamp(Instant.now())
                                     .build()).queue();
                         } else {
@@ -36,6 +37,7 @@ public class ServerBanCommand implements Command {
                                     .setTitle("Erfolgreich ausgeführt")
                                     .setDescription("Ich habe erfolgreich den Server " + g.getName() + " gemuted.")
                                     .setColor(Color.GREEN)
+                                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                                     .setTimestamp(Instant.now())
                                     .build()).queue();
                         }
@@ -44,6 +46,7 @@ public class ServerBanCommand implements Command {
                                 .setTitle("Nicht möglich")
                                 .setDescription("Der angegebene Server kann nicht gefunden werden.")
                                 .setColor(Color.RED)
+                                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
                     }
@@ -52,6 +55,7 @@ public class ServerBanCommand implements Command {
                             .setTitle("Falsche Nutzung")
                             .setDescription("Die angegebene Server ID ist nicht gültig.")
                             .setColor(Color.RED)
+                            .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                             .setTimestamp(Instant.now())
                             .build()).queue();
                 }
@@ -60,6 +64,7 @@ public class ServerBanCommand implements Command {
                         .setTitle("Falsche Nutzung")
                         .setDescription("Du musst genau eine Server ID angeben.")
                         .setColor(Color.RED)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
             }
@@ -68,6 +73,7 @@ public class ServerBanCommand implements Command {
                     .setTitle("Keine Berechtigung")
                     .setDescription("Du bist nicht Teil des Teams!")
                     .setColor(Color.RED)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         }

@@ -25,6 +25,7 @@ public class LottoCommand implements Command {
                 .setTitle("Nicht möglich")
                 .setDescription("Du kannst nur alle sechs Stunden den Lotto Command nutzen.")
                 .setColor(Color.RED)
+                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                 .setTimestamp(Instant.now())
                 .build()).queue();
     }
@@ -39,6 +40,7 @@ public class LottoCommand implements Command {
                         .setTitle("Gewonnen!")
                         .setDescription("Herzlichen Glückwunsch du hast soeben die Premium Rolle gewonnen!")
                         .setColor(Color.magenta)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
             } else {
@@ -46,6 +48,7 @@ public class LottoCommand implements Command {
                         .setTitle("Keine Permission")
                         .setDescription("Ich benötige die `Manage Roles` Permission um diesen Command auszuführen.")
                         .setColor(Color.RED)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
             }
@@ -56,6 +59,7 @@ public class LottoCommand implements Command {
                         .setTitle("Gewonnen!")
                         .setDescription("Herzlichen Glückwunsch du hast soeben den Bot Plus Status gewonnen!")
                         .setColor(Color.magenta)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
             } else {
@@ -63,6 +67,7 @@ public class LottoCommand implements Command {
                         .setTitle("Leider nichts")
                         .setDescription("Das war wohl leider nichts. Vielleicht nächstes mal.")
                         .setColor(Color.CYAN)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
             }
@@ -71,6 +76,7 @@ public class LottoCommand implements Command {
                     .setTitle("Leider nichts")
                     .setDescription("Das war wohl leider nichts. Vielleicht nächstes mal.")
                     .setColor(Color.CYAN)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         }

@@ -24,6 +24,7 @@ public class SetGlobalCommand implements Command {
                         .setTitle("Erfolgreich festgelegt")
                         .setDescription("Ich habe erfolgreich den Global Channel auf " + event.getMessage().getMentionedChannels().get(0).getAsMention()  + " festgelegt.")
                         .setColor(Color.GREEN)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
             } else {
@@ -31,6 +32,7 @@ public class SetGlobalCommand implements Command {
                         .setTitle("Keine Permission")
                         .setDescription("Du benötigst die `Manage Server` Permission um diesen Command auszuführen.")
                         .setColor(Color.RED)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
             }
@@ -39,6 +41,7 @@ public class SetGlobalCommand implements Command {
                     .setTitle("Falsche Nutzung")
                     .setDescription("Du musst den Command wiefolgt nutzen: `?setglobal #serverchat`.")
                     .setColor(Color.RED)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         }

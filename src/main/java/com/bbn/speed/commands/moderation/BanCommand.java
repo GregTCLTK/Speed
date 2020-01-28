@@ -21,6 +21,7 @@ public class BanCommand implements Command {
                                 .setTitle("Erfolgreich gebannt")
                                 .setDescription("Ich habe " + event.getMessage().getMentionedUsers().get(0).getAsTag() + " erfolgreich gebannt.")
                                 .setColor(Color.GREEN)
+                                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
                     } else {
@@ -28,6 +29,7 @@ public class BanCommand implements Command {
                                 .setTitle("Keine Permission")
                                 .setDescription("Meine Rolle muss über der höchsten Rolle der zu bannenden Person sein.")
                                 .setColor(Color.RED)
+                                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
                     }
@@ -36,6 +38,7 @@ public class BanCommand implements Command {
                             .setTitle("Keine Permission")
                             .setDescription("Ich benötige die `Ban Members` Permission um diesen Command auszuführen.")
                             .setColor(Color.RED)
+                            .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                             .setTimestamp(Instant.now())
                             .build()).queue();
                 }
@@ -44,6 +47,7 @@ public class BanCommand implements Command {
                         .setTitle("Keine Permission")
                         .setDescription("Du benötigst die `Ban Members` Permission um diesen Command auszuführen.")
                         .setColor(Color.RED)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
             }
@@ -52,6 +56,7 @@ public class BanCommand implements Command {
                     .setTitle("Keine Mention")
                     .setDescription("Du musst mindestens einen User per Mention angeben. Deine Nachricht sollte also z.B so aussehen: `?ban @Skidder#6775`")
                     .setColor(Color.RED)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         }

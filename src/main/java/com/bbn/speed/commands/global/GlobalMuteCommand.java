@@ -25,6 +25,7 @@ public class GlobalMuteCommand implements Command {
                             .setTitle("Erfolgreich ausgeführt")
                             .setDescription("Ich habe erfolgreich " + event.getMessage().getMentionedUsers().get(0).getAsTag() + " entmuted.")
                             .setColor(Color.GREEN)
+                            .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                             .setTimestamp(Instant.now())
                             .build()).queue();
                 } else {
@@ -33,6 +34,7 @@ public class GlobalMuteCommand implements Command {
                             .setTitle("Erfolgreich ausgeführt")
                             .setDescription("Ich habe erfolgreich " + event.getMessage().getMentionedUsers().get(0).getAsTag() + " gemuted.")
                             .setColor(Color.GREEN)
+                            .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                             .setTimestamp(Instant.now())
                             .build()).queue();
                 }
@@ -45,6 +47,7 @@ public class GlobalMuteCommand implements Command {
                                 .setTitle("Erfolgreich ausgeführt")
                                 .setDescription("Ich habe erfolgreich " + u.getAsTag() + " entmuted.")
                                 .setColor(Color.GREEN)
+                                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
                     } else {
@@ -53,6 +56,7 @@ public class GlobalMuteCommand implements Command {
                                 .setTitle("Erfolgreich ausgeführt")
                                 .setDescription("Ich habe erfolgreich " + u.getAsTag() + " gemuted.")
                                 .setColor(Color.GREEN)
+                                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                                 .setTimestamp(Instant.now())
                                 .build()).queue();
                     }
@@ -61,6 +65,7 @@ public class GlobalMuteCommand implements Command {
                             .setTitle("Nicht möglich")
                             .setDescription("Der angegebene Benutzer war noch nie auf einem Server auf dem ich auch war.")
                             .setColor(Color.RED)
+                            .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                             .setTimestamp(Instant.now())
                             .build()).queue();
                 }
@@ -69,6 +74,7 @@ public class GlobalMuteCommand implements Command {
                         .setTitle("Falsche Nutzung")
                         .setDescription("Du musst genau einen User angeben.")
                         .setColor(Color.RED)
+                        .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                         .setTimestamp(Instant.now())
                         .build()).queue();
             }
@@ -77,6 +83,7 @@ public class GlobalMuteCommand implements Command {
                     .setTitle("Keine Berechtigung")
                     .setDescription("Du bist nicht Teil des Teams!")
                     .setColor(Color.RED)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
                     .setTimestamp(Instant.now())
                     .build()).queue();
         }

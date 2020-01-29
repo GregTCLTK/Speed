@@ -20,7 +20,7 @@ public class HelpListener extends ListenerAdapter {
         if (Speed.rethink.isHelp(event.getMessageId()) && !event.getUser().isBot()) {
             switch (event.getReactionEmote().getEmoji()) {
                 case 1 + "\u20E3":
-                    event.getTextChannel().retrieveMessageById(event.getMessageId()).complete().editMessage(new EmbedBuilder()
+                    event.getChannel().retrieveMessageById(event.getMessageId()).complete().editMessage(new EmbedBuilder()
                             .setTitle("Hilfe")
                             .setDescription("Hier siehst du alle Befehle der Moderation")
                             .addField("?unmute", "Entmutet einen Benutzer", true)
@@ -37,7 +37,7 @@ public class HelpListener extends ListenerAdapter {
                     });
                     break;
                 case 2 + "\u20E3":
-                    event.getTextChannel().retrieveMessageById(event.getMessageId()).complete().editMessage(new EmbedBuilder()
+                    event.getChannel().retrieveMessageById(event.getMessageId()).complete().editMessage(new EmbedBuilder()
                             .setTitle("Hilfe")
                             .setDescription("Hier siehst du alle Befehle welche mit dem Geldsystem zu tun haben")
                             .addField("?stats", "Zeigt deine Stats an", true)
@@ -57,7 +57,7 @@ public class HelpListener extends ListenerAdapter {
                     });
                     break;
                 case 3 + "\u20E3":
-                    event.getTextChannel().retrieveMessageById(event.getMessageId()).complete().editMessage(new EmbedBuilder()
+                    event.getChannel().retrieveMessageById(event.getMessageId()).complete().editMessage(new EmbedBuilder()
                             .setTitle("Hilfe")
                             .setDescription("Hier siehst du alle Fun Befehle")
                             .addField("?meme", "Sendet ein zufälliges Meme", true)
@@ -70,7 +70,7 @@ public class HelpListener extends ListenerAdapter {
                     });
                     break;
                 case 4 + "\u20E3":
-                    event.getTextChannel().retrieveMessageById(event.getMessageId()).complete().editMessage(new EmbedBuilder()
+                    event.getChannel().retrieveMessageById(event.getMessageId()).complete().editMessage(new EmbedBuilder()
                             .setTitle("Hilfe")
                             .addField("?setglobal", "Legt den Channel für den globalen Chat fest", true)
                             .addField("?removeglobal", "Entfernt den Channel für den globalen Chat", true)
@@ -84,7 +84,7 @@ public class HelpListener extends ListenerAdapter {
                     });
                     break;
                 case "⏪":
-                    event.getTextChannel().retrieveMessageById(event.getMessageId()).complete().editMessage(new EmbedBuilder()
+                    event.getChannel().retrieveMessageById(event.getMessageId()).complete().editMessage(new EmbedBuilder()
                             .setTitle("Hilfe")
                             .setDescription("Bitte wähle die Kategorie zu der du Hilfe benötigst.\n\n:one: Moderation\n:two: Money\n:three: Fun\n:four: Global")
                             .setColor(Color.GREEN)

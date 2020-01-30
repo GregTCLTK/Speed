@@ -7,6 +7,7 @@ package com.bbn.speed.commands.money;
 import com.bbn.speed.Speed;
 import com.bbn.speed.commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 import java.awt.*;
@@ -18,17 +19,33 @@ public class StatsCommand implements Command {
     public void action(String[] args, MessageReceivedEvent event) {
         EmbedBuilder eb = new EmbedBuilder();
 
-        if (Speed.rethink.isBotPremium(event.getAuthor().getId())) {
-            eb.addField("Bot Plus", "ja", true);
+        if (event.getMessage().getMentionedUsers().size() == 1) {
+            User u = event.getMessage().getMentionedUsers().get(0);
+            if (Speed.rethink.isBotPremium(u.getId())) {
+                eb.addField("Bot Plus", "ja", true);
+            } else {
+                eb.addField("Bot Plus", "nein", true);
+            }
+            event.getTextChannel().sendMessage(eb
+                    .setTitle(u + "s Statistiken")
+                    .addField("Bäume", String.valueOf(Speed.rethink.getMoney(u.getId())), true)
+                    .setColor(Color.GREEN)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
+                    .setTimestamp(Instant.now())
+                    .build()).queue();
         } else {
-            eb.addField("Bot Plus", "nein", true);
+            if (Speed.rethink.isBotPremium(event.getAuthor().getId())) {
+                eb.addField("Bot Plus", "ja", true);
+            } else {
+                eb.addField("Bot Plus", "nein", true);
+            }
+            event.getTextChannel().sendMessage(eb
+                    .setTitle("Deine Statistiken")
+                    .addField("Bäume", String.valueOf(Speed.rethink.getMoney(event.getAuthor().getId())), true)
+                    .setColor(Color.GREEN)
+                    .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
+                    .setTimestamp(Instant.now())
+                    .build()).queue();
         }
-        event.getTextChannel().sendMessage(eb
-                .setTitle("Deine Statistiken")
-                .addField("Bäume", String.valueOf(Speed.rethink.getMoney(event.getAuthor().getId())), true)
-                .setColor(Color.GREEN)
-                .setFooter("Speed", "https://cdn.discordapp.com/avatars/648542896269819906/4bd3ff019e6107a65f8e96d6d9de7983.png")
-                .setTimestamp(Instant.now())
-                .build()).queue();
     }
 }

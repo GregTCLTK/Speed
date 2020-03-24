@@ -6,7 +6,7 @@ package com.bbn.speed.listener;
 
 import com.bbn.speed.Speed;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent;
-import net.dv8tion.jda.api.events.guild.member.GuildMemberLeaveEvent;
+import net.dv8tion.jda.api.events.guild.member.GuildMemberRemoveEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 import javax.annotation.Nonnull;
@@ -20,8 +20,8 @@ public class UserListener extends ListenerAdapter {
     }
 
     @Override
-    public void onGuildMemberLeave(@Nonnull GuildMemberLeaveEvent event) {
+    public void onGuildMemberRemove(@Nonnull GuildMemberRemoveEvent event) {
         //XZerkrypter.rethink.removeUser(event.getUser().getId());
-        super.onGuildMemberLeave(event);
+        super.onGuildMemberRemove(event);
     }
 }

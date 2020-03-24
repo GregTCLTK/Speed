@@ -22,8 +22,7 @@ public class Speed {
 
         rethink.connect();
 
-        DefaultShardManagerBuilder builder = new DefaultShardManagerBuilder();
-        builder.setToken(config.getToken());
+        DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault(config.getToken());
         builder.addEventListeners(
                 new ReadyListener(),
                 new CommandListener(),

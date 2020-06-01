@@ -33,7 +33,7 @@ public class Rethink {
 
     private JSONArray getAsArray(String table, String where, String value) {
         try {
-            String string = r.table(table).filter(row -> row.g(where.toLowerCase()).eq(value)).coerceTo("array").toJson().run(conn);
+            String string = String.valueOf(r.table(table).filter(row -> row.g(where.toLowerCase()).eq(value)).coerceTo("array").toJson().run(conn).first());
             return new JSONArray(string);
         } catch (NoSuchElementException e) {
             return null;
